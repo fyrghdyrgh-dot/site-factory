@@ -43,7 +43,7 @@
 执行步骤：
 1. 先运行 npm run select，确认本次计划生成的 family、topic、repo_name 和 preset_file
 2. 再运行 npm run cycle，完成生成、建仓、发布和注册表更新
-3. 如果 cycle 成功，检查 registry/site-registry.json 是否发生变化
+3. 从 cycle 输出中读取 `status`、`site_url`、`verified_urls` 和 `verification_attempts`
 4. 如果 site-factory 仓库有变化，执行：
    - git add registry/site-registry.json
    - git commit -m "Update site registry after automated publish"
@@ -52,10 +52,11 @@
 
 发布验证要求：
 1. 从 npm run cycle 的输出中获取 site_url
-2. 用 HTTP 请求检查 site_url 首页是否返回正常 HTML
-3. 至少再检查一个分类页或详情页标题
-4. 如果 GitHub Pages 仍在 building，短暂等待后再检查一次
-5. 如果最终仍不可访问，明确标记为发布未完成，不要假称成功
+2. 优先信任 `npm run cycle` 返回的验证结果
+3. 若 `status` 为 `published_pending_verification`，再补做一次 HTTP 检查
+4. 至少再检查一个分类页或详情页标题
+5. 如果 GitHub Pages 仍在 building，短暂等待后再检查一次
+6. 如果最终仍不可访问，明确标记为发布未完成，不要假称成功
 
 重复控制要求：
 1. 允许局部重复，但不能连续几次生成几乎完全相同的网站
@@ -92,17 +93,25 @@
 ## 当前这份提示词适用于什么
 
 - 当前适用于 `site-factory` 这个自动化总控仓库
-- 当前至少可驱动 `family-nav`
+- 当前可驱动 4 个 family：
+  - `family-nav`
+  - `family-tool`
+  - `family-lead`
+  - `family-analysis`
 - 当前可生成并发布：
   - `fy-global-tools`
   - `fy-dev-tools`
   - `fy-server-brief`
+  - `fy-data-clean-lab`
+  - `fy-server-choice`
+  - `fy-saas-compare`
+  - `fy-ai-briefing`
+  - `fy-performance-brief`
 
 ## 后续扩展
 
-后续如果补了 `family-tool`、`family-lead`、`family-analysis`，这份提示词本身不需要大改，只要继续维护：
+后续如果继续扩充站型或主题，这份提示词本身不需要大改，只要继续维护：
 
 - `data/families.json`
 - `data/topic-pool.json`
 - `registry/site-registry.json`
-
