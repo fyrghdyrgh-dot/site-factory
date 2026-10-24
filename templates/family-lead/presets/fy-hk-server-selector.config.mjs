@@ -9,6 +9,17 @@ export default {
     heroSubtitle: "如果你在香港、新加坡、日本和美国节点之间犹豫，可以先看访问区域、延迟表现和后续扩展，再决定把业务放在哪。",
     primaryCta: { label: "查看地区方案", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
+    panelTitle: "节点选择",
+    heroBadges: ["香港", "新加坡", "日本", "美国"],
+    theme: {
+      bg: "#f5f9ff",
+      accent: "#0f4c81",
+      accent2: "#38bdf8",
+      heroTop: "#081b38",
+      heroBottom: "#0f3a68",
+      panelSoft: "#eff6ff",
+      accentSoft: "rgba(56, 189, 248, 0.16)"
+    },
     selectionNotes: ["先看访问地区分布。", "再看延迟和线路稳定性。", "最后看预算和扩容空间。"],
     trustPoints: ["先按访问区域判断", "覆盖常见节点选择问题", "方便继续比较方案"],
     methodSteps: [

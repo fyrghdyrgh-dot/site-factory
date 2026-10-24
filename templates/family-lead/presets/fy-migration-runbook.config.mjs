@@ -9,6 +9,17 @@ export default {
     heroSubtitle: "不管是换机房、换主机还是切数据库，先把切换窗口、验证步骤和回滚准备想清楚，迁移过程会稳很多。",
     primaryCta: { label: "查看迁移方案", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
+    panelTitle: "迁移前先看",
+    heroBadges: ["切换窗口", "验证顺序", "回滚准备"],
+    theme: {
+      bg: "#fbf7ff",
+      accent: "#7c3aed",
+      accent2: "#ec4899",
+      heroTop: "#140b2e",
+      heroBottom: "#3b1f63",
+      panelSoft: "#faf5ff",
+      accentSoft: "rgba(236, 72, 153, 0.16)"
+    },
     selectionNotes: ["先盘点现状。", "再规划切换窗口。", "最后准备回滚和验证。"],
     trustPoints: ["先看切换风险", "覆盖常见迁移场景", "方便继续规划下一步"],
     methodSteps: [

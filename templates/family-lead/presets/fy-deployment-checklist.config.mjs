@@ -9,6 +9,17 @@ export default {
     heroSubtitle: "上线前把域名、端口、备份、监控和回滚这些关键项先确认清楚，后面会少很多返工，也更不容易在正式发布时出问题。",
     primaryCta: { label: "查看部署专题", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
+    panelTitle: "上线前先看",
+    heroBadges: ["域名与端口", "备份与监控", "回滚准备"],
+    theme: {
+      bg: "#f7f8ff",
+      accent: "#334155",
+      accent2: "#6366f1",
+      heroTop: "#101827",
+      heroBottom: "#1f2d52",
+      panelSoft: "#eef2ff",
+      accentSoft: "rgba(99, 102, 241, 0.16)"
+    },
     selectionNotes: ["先确认上线目标。", "再检查监控备份。", "最后核对资源和回滚。"],
     trustPoints: ["步骤清晰", "适合上线前核对", "覆盖常见风险点"],
     methodSteps: [

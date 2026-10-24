@@ -9,6 +9,17 @@ export default {
     heroSubtitle: "如果你正在比较 CN2、BGP 或大陆优化线路，这里会先帮你看懂区别，再决定是不是值得为更稳的访问体验多花预算。",
     primaryCta: { label: "查看线路专题", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
+    panelTitle: "线路判断",
+    heroBadges: ["CN2", "BGP", "大陆优化"],
+    theme: {
+      bg: "#fffaf4",
+      accent: "#b45309",
+      accent2: "#f59e0b",
+      heroTop: "#241308",
+      heroBottom: "#5b2c0f",
+      panelSoft: "#fff7ed",
+      accentSoft: "rgba(245, 158, 11, 0.16)"
+    },
     selectionNotes: ["先看访问来源。", "再看高峰期波动。", "最后核对线路成本。"],
     trustPoints: ["先看真实访问差异", "覆盖常见线路问题", "方便继续比较方案"],
     methodSteps: [

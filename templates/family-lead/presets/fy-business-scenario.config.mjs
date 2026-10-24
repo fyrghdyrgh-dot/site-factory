@@ -9,6 +9,17 @@ export default {
     heroSubtitle: "如果你做的是跨境电商、接口服务或下载分发，可以直接从对应场景进入，少走弯路，也更容易找到适合自己的部署思路。",
     primaryCta: { label: "查看场景方案", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
+    panelTitle: "业务判断",
+    heroBadges: ["跨境电商", "API 服务", "下载分发"],
+    theme: {
+      bg: "#f5fbfb",
+      accent: "#0f766e",
+      accent2: "#14b8a6",
+      heroTop: "#062b2d",
+      heroBottom: "#0f4a4e",
+      panelSoft: "#ecfeff",
+      accentSoft: "rgba(20, 184, 166, 0.16)"
+    },
     selectionNotes: ["先看业务模式。", "再看核心访问路径。", "最后核对线路与资源。"],
     trustPoints: ["按真实业务来选", "覆盖常见高价值场景", "提供下一步参考"],
     methodSteps: [

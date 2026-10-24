@@ -112,6 +112,10 @@ function siteBrandLabel() {
   return config.site.title;
 }
 
+function themeValue(key, fallback) {
+  return config.site.theme?.[key] ?? fallback;
+}
+
 function renderHomePage() {
   const canonical = absoluteUrl();
   const jsonLdEntries = [
@@ -167,9 +171,10 @@ ${renderMeta({
           <a class="button" href="#offers">查看可选方案</a>
           <a class="button ghost" href="${escapeHtml(config.site.secondaryCta.href)}">获取参考资源</a>
         </div>
+        ${config.site.heroBadges?.length ? `<div class="hero-badges">${config.site.heroBadges.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div>` : ""}
       </div>
       <aside class="hero-panel">
-        <h2>选择建议</h2>
+        <h2>${escapeHtml(config.site.panelTitle ?? "选择建议")}</h2>
         <ul>
           ${config.site.selectionNotes.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
         </ul>
@@ -357,21 +362,34 @@ function renderSitemap() {
 
 function renderCss() {
   return `:root {
-  --bg: #f8f8fb;
+  --bg: ${themeValue("bg", "#f8f8fb")};
   --ink: #101223;
   --muted: #6b7085;
-  --accent: #0f172a;
-  --accent-2: #4f46e5;
+  --accent: ${themeValue("accent", "#0f172a")};
+  --accent-2: ${themeValue("accent2", "#4f46e5")};
+  --hero-top: ${themeValue("heroTop", "#0f172a")};
+  --hero-bottom: ${themeValue("heroBottom", "#111c46")};
+  --panel-soft: ${themeValue("panelSoft", "#f8faff")};
+  --accent-soft: ${themeValue("accentSoft", "rgba(79, 70, 229, 0.14)")};
   --card: #ffffff;
   --line: #e3e6f0;
 }
 
 * { box-sizing: border-box; }
 body {
+  position: relative;
   margin: 0;
   font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
-  background: linear-gradient(180deg, #0f172a 0, #0f172a 240px, var(--bg) 240px);
+  background: var(--bg);
   color: var(--ink);
+}
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: clamp(460px, 58vw, 640px);
+  background: linear-gradient(180deg, var(--hero-top) 0, var(--hero-bottom) 100%);
+  z-index: -1;
 }
 a { color: inherit; text-decoration: none; }
 .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
@@ -384,9 +402,10 @@ nav { color: rgba(255,255,255,0.78); flex-wrap: wrap; }
   display: inline-flex; align-items: center; justify-content: center;
   min-height: 44px; padding: 0 18px; border-radius: 999px; font-weight: 700;
 }
-.button { background: var(--accent-2); color: #fff; }
+.button { background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: #fff; box-shadow: 0 14px 30px rgba(16, 18, 35, 0.18); }
 .button.ghost { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
-.hero { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr); gap: 24px; padding: 34px 0 24px; color: #fff; }
+.hero { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr); gap: 24px; padding: 34px 0 56px; color: #fff; align-items: start; }
+.hero-copy { display: grid; gap: 18px; align-content: start; }
 .eyebrow { margin: 0 0 10px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #a5b4fc; font-weight: 800; }
 h1, h2, h3 { margin: 0; line-height: 1.15; }
 h1 { font-size: clamp(36px, 6vw, 58px); max-width: 700px; }
@@ -398,8 +417,20 @@ h1 { font-size: clamp(36px, 6vw, 58px); max-width: 700px; }
   border-radius: 24px;
   box-shadow: 0 18px 36px rgba(16, 18, 35, 0.08);
 }
-.hero-panel { padding: 24px; color: var(--ink); }
+.hero-panel { padding: 24px; color: var(--ink); background: linear-gradient(180deg, #ffffff 0, var(--panel-soft) 100%); }
 .hero-panel ul, .signal-list { padding-left: 18px; margin: 0; }
+.hero-badges { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-badges span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.92);
+  font-weight: 700;
+}
 .trust-row { flex-wrap: wrap; padding-bottom: 18px; }
 .trust-row article { flex: 1 1 180px; padding: 18px 20px; }
 .offer-shell, .method-shell, .faq-shell { padding: 24px 0; }
