@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>模板一：搜索导航型</title>
+  <link rel="stylesheet" href="./nav-template-kit.css">
+</head>
+<body>
+  <header class="kit-header">
+    <div class="shell kit-topbar">
+      <div class="brand-wrap">
+        <span class="brand-badge">T1</span>
+        <div class="brand-title">模板一：搜索导航型</div>
+      </div>
+      <nav class="top-links">
+        <a href="./index.html">模板索引</a>
+        <a class="active" href="./template-search-hub.html">当前模板</a>
+        <a href="./template-category-directory.html">模板二</a>
+        <a href="./template-media-portal.html">模板三</a>
+      </nav>
+      <div class="top-actions">
+        <a class="ghost-btn" href="./reference-summary.md">参考总结</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="shell hero">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">template 01</span>
+          <h1>一进站先搜索，再把热门工具和专题推荐推到前面</h1>
+          <p class="hero-copy">这套结构适合新建导航站首页。它借鉴了 `快捷导航` 和 `AI 工具集` 的“先给入口，再给推荐”的思路，但把页面收得更干净：搜索、热门、分类、专题推荐分成 4 层，不会一上来就太拥挤。</p>
+          <div class="search-panel">
+            <div class="search-box">
+              <div class="search-scope">全站</div>
+              <div class="search-input">搜索 AI 聊天、视频生成、设计工具、提示词、教程...</div>
+              <div class="search-submit">开始查找</div>
+            </div>
+            <div class="search-tips">
+              <span class="tag">热门搜索：AI 写作</span>
+              <span class="tag">热门搜索：视频生成</span>
+              <span class="tag">热门搜索：提示词</span>
+              <span class="tag">热门搜索：Agent</span>
+            </div>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <article class="panel-card">
+            <h2 class="panel-title">页面节奏</h2>
+            <div class="feed-list">
+              <div class="feed-item">
+                <strong>第 1 层：搜索框</strong>
+                <span>解决“我带着目标来找工具”的需求。</span>
+              </div>
+              <div class="feed-item">
+                <strong>第 2 层：热门推荐</strong>
+                <span>给没想法的人一个低成本入口。</span>
+              </div>
+              <div class="feed-item">
+                <strong>第 3 层：分类推荐</strong>
+                <span>让用户继续按场景分流。</span>
+              </div>
+            </div>
+          </article>
+        </aside>
+      </div>
+
+      <div class="highlight-strip">
+        <article class="highlight-card">
+          <span class="mini-tag">今日推荐</span>
+          <strong>AI 聊天助手</strong>
+          <p>适合接聊天、搜索、问答等大流量入口。</p>
+        </article>
+        <article class="highlight-card">
+          <span class="mini-tag">出图爆款</span>
+          <strong>AI 设计创作</strong>
+          <p>适合卡片展示 logo、图片、PPT 与视频工具。</p>
+        </article>
+        <article class="highlight-card">
+          <span class="mini-tag">工作流</span>
+          <strong>AI 办公效率</strong>
+          <p>适合收录表格、文档、会议、自动化等工具。</p>
+        </article>
+        <article class="highlight-card">
+          <span class="mini-tag">新趋势</span>
+          <strong>Agent 与开发</strong>
+          <p>适合引出编程、API、工作流和智能体专题。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell layout" style="margin-top:24px;">
+      <article class="section-card">
+        <div class="section-head">
+          <div>
+            <div class="section-title">热门工具推荐</div>
+            <p>参考站几乎都会把头部工具放在首页首屏之后，这部分最适合做“站点名片”。</p>
+          </div>
+          <a class="section-link" href="#">查看全部</a>
+        </div>
+        <div class="tool-grid">
+          <article class="tool-card">
+            <div class="tool-top"><div class="tool-logo">DB</div><div><div class="tool-name">豆包</div><div class="tool-meta">聊天 · 中文</div></div></div>
+            <p class="tool-desc">适合中文问答、写作和轻办公场景，通常会被放在热门工具区。</p>
+            <div class="tool-tags"><span class="mini-tag">热门</span><span class="mini-tag">中文</span></div>
+            <div class="tool-actions"><a href="#">访问工具</a><span class="score">高点击</span></div>
+          </article>
+          <article class="tool-card">
+            <div class="tool-top"><div class="tool-logo">MJ</div><div><div class="tool-name">Midjourney</div><div class="tool-meta">绘画 · 国际</div></div></div>
+            <p class="tool-desc">适合视觉与设计站点的头部推荐区，也常用于证明站点覆盖广度。</p>
+            <div class="tool-tags"><span class="mini-tag">设计</span><span class="mini-tag">EN</span></div>
+            <div class="tool-actions"><a href="#">查看详情</a><span class="score">高认知</span></div>
+          </article>
+          <article class="tool-card">
+            <div class="tool-top"><div class="tool-logo">PP</div><div><div class="tool-name">AiPPT</div><div class="tool-meta">PPT · 办公</div></div></div>
+            <p class="tool-desc">适合办公效率类目录首页，兼顾轻决策和强转化。</p>
+            <div class="tool-tags"><span class="mini-tag">PPT</span><span class="mini-tag">效率</span></div>
+            <div class="tool-actions"><a href="#">查看方案</a><span class="score">适合投放</span></div>
+          </article>
+        </div>
+      </article>
+
+      <article class="section-card">
+        <div class="section-head">
+          <div>
+            <div class="section-title">按使用场景快速进入</div>
+            <p>这是对参考站“热门分类条 + 工具块”的收敛版，适合首页做高效分流。</p>
+          </div>
+        </div>
+        <div class="tool-grid tight">
+          <article class="tool-card"><div class="tool-name">AI 聊天</div><p class="tool-desc">问答、搜索、总结、知识助手。</p><div class="tool-actions"><a href="#">进入分类</a><span class="score">42 工具</span></div></article>
+          <article class="tool-card"><div class="tool-name">AI 写作</div><p class="tool-desc">长文、文案、论文、公文、提示词。</p><div class="tool-actions"><a href="#">进入分类</a><span class="score">36 工具</span></div></article>
+          <article class="tool-card"><div class="tool-name">AI 视频</div><p class="tool-desc">文生视频、口播、短剧、动画生成。</p><div class="tool-actions"><a href="#">进入分类</a><span class="score">21 工具</span></div></article>
+          <article class="tool-card"><div class="tool-name">AI 设计</div><p class="tool-desc">海报、字体、Logo、修图、视觉生成。</p><div class="tool-actions"><a href="#">进入分类</a><span class="score">27 工具</span></div></article>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="kit-footer">
+    <div class="shell">
+      <span>适合：新站首页、工具导航首页、轻媒体化目录站</span>
+      <span>参考源：快捷导航、AI 工具集</span>
+    </div>
+  </footer>
+</body>
+</html>
