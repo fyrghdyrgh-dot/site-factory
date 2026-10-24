@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>数据库切换判断页 - fy 迁移切换方案</title>
+  <meta name="description" content="适合担心迁移过程中数据一致性、写入中断和回滚难度的业务团队。">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="数据库切换判断页 - fy 迁移切换方案">
+  <meta property="og:description" content="适合担心迁移过程中数据一致性、写入中断和回滚难度的业务团队。">
+  <meta property="og:url" content="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/database-cutover-guide/">
+  <link rel="canonical" href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/database-cutover-guide/">
+  <link rel="stylesheet" href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/assets/lead.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"数据库切换判断页","url":"https://fyrghdyrgh-dot.github.io/fy-migration-runbook/database-cutover-guide/","description":"适合担心迁移过程中数据一致性、写入中断和回滚难度的业务团队。","audience":{"@type":"Audience","audienceType":"有持续写入业务的团队"}}</script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-row">
+      <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/">fy migration runbook</a>
+      <nav><a href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/#offers">返回方案目录</a></nav>
+      <a class="button ghost" href="https://www.1bgp.com/">查看 1bgp 切换方案</a>
+    </div>
+  </header>
+  <main class="shell offer-detail">
+    <section class="detail-copy">
+      <p class="eyebrow">有持续写入业务的团队</p>
+      <h1>数据库切换判断页</h1>
+      <p class="hero-text">数据库切换真正难的是一致性和验证路径，不是把数据搬过去本身。</p>
+      <div class="compare-grid">
+        <article><strong>数据一致性</strong><span>核心问题</span></article><article><strong>写入控制</strong><span>优先关注</span></article><article><strong>看回滚</strong><span>下一步</span></article>
+      </div>
+      <section class="content-block"><h2>写入控制很关键</h2><p>如果切换窗口内写入策略不明确，迁移后的数据一致性很难保障。</p></section><section class="content-block"><h2>验证比速度更重要</h2><p>切换后应快速核对关键业务数据，而不是只看服务启动成功。</p></section>
+      <section class="content-block">
+        <h2>常见判断信号</h2>
+        <ul class="signal-list">
+          <li>业务持续有写入</li><li>担心数据丢失</li><li>需要明确切换窗口和验证顺序</li>
+        </ul>
+      </section>
+      <section class="content-block">
+        <h2>常见问题</h2>
+        <div class="faq-grid">
+          <article><h3>全量同步后就够了吗？</h3><p>通常还需要增量切换和最终验证。</p></article><article><h3>数据库回滚难吗？</h3><p>难度取决于写入策略和恢复点准备。</p></article>
+        </div>
+      </section>
+    </section>
+    <aside class="offer-sidebar">
+      <div class="sidebar-card">
+        <h2>适合对象</h2>
+        <p>适合担心迁移过程中数据一致性、写入中断和回滚难度的业务团队。</p>
+      </div>
+      <div class="sidebar-card">
+        <h2>重点收益</h2>
+        <ul class="signal-list">
+          <li>适合高风险切换场景</li><li>强调一致性与验证</li><li>利于承接迁移方案需求</li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <a class="button" href="https://www.1bgp.com/">查看 1bgp 切换方案</a>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
