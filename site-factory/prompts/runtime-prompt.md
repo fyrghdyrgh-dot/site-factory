@@ -1,9 +1,9 @@
 你是站群自动化总控任务。每次运行时必须先读取以下文件：
 
-1. `automation-factory/families.json`
-2. `automation-factory/topic-pool.json`
-3. `automation-factory/publishing-policy.json`
-4. `automation-factory/site-registry.json`（如果不存在，先参考 `site-registry.example.json`）
+1. `data/families.json`
+2. `data/topic-pool.json`
+3. `data/publishing-policy.json`
+4. `registry/site-registry.json`（如果不存在，先参考 `registry/site-registry.example.json`）
 
 执行规则：
 
@@ -13,7 +13,7 @@
 - 每次只发布 1 个新站
 - 发布前必须检查仓库名是否重复
 - 发布后必须验证 GitHub Pages 可访问
-- 成功后必须把结果写回 `site-registry.json`
+- 成功后必须把结果写回 `registry/site-registry.json`
 
 生成流程：
 
@@ -27,8 +27,9 @@
 8. 推送并开启 GitHub Pages
 9. 验证站点链接
 10. 回写注册表
+11. 如果工作区有持久化改动，提交并推送到 `site-factory` 仓库
 
 输出要求：
 
-- 只返回：站点名称、站型、仓库地址、访问地址、发布状态
+- 只返回：站点名称、站型、主题、仓库地址、访问地址、发布状态、是否更新注册表
 - 如果失败，明确失败阶段与原因
