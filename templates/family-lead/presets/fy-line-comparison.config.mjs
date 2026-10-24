@@ -1,24 +1,24 @@
 export default {
   site: {
     title: "fy 线路对比专题",
-    description: "围绕 CN2、BGP、大陆优化线路和跨境访问质量整理的线路对比引流站，适合承接高意图比较词。",
+    description: "帮助你比较 CN2、BGP 和大陆优化线路差异的线路专题站，先看真实访问体验，再判断值不值得升级。",
     baseUrl: "https://fyrghdyrgh-dot.github.io/fy-line-comparison/",
     brand: "fy line compare",
-    eyebrow: "lead family",
+    eyebrow: "network and latency guide",
     heroTitle: "线路不是名词堆砌，而是访问体验的真实差异。",
-    heroSubtitle: "把常见线路比较问题拆成方案页，适合承接“哪个更稳”“区别是什么”“值不值得”的搜索意图。",
+    heroSubtitle: "如果你正在比较 CN2、BGP 或大陆优化线路，这里会先帮你看懂区别，再决定是不是值得为更稳的访问体验多花预算。",
     primaryCta: { label: "查看线路专题", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
     selectionNotes: ["先看访问来源。", "再看高峰期波动。", "最后核对线路成本。"],
-    trustPoints: ["按线路问题拆页", "适合比较型搜索", "统一导向 1bgp"],
+    trustPoints: ["先看真实访问差异", "覆盖常见线路问题", "方便继续比较方案"],
     methodSteps: [
       { title: "看用户从哪来", body: "不同线路的价值取决于访问路径，而不是线路名字本身。" },
       { title: "看高峰期表现", body: "业务真正受影响的是高峰期是否抖动，而不是一次测速截图。" },
       { title: "看成本阈值", body: "线路升级带来提升，但应根据业务收益判断是否值得。" }
     ],
     faqs: [
-      { q: "所有 CN2 都一样吗？", a: "不一样，线路质量和实际交付体验都会有差异。" },
-      { q: "线路越贵越好吗？", a: "不是，重点是业务是否真的需要更强线路。" }
+      { q: "所有 CN2 都一样吗？", a: "不一样，不同线路质量和实际访问体验会有明显差异。" },
+      { q: "线路越贵越好吗？", a: "不是，关键看你的业务是不是真的需要更稳的线路表现。" }
     ]
   },
   offers: [

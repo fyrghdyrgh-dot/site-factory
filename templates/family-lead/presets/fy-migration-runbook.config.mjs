@@ -1,24 +1,24 @@
 export default {
   site: {
     title: "fy 迁移切换方案",
-    description: "围绕主机迁移、数据库切换和站点回滚整理的迁移型引流站，适合承接高意图迁移词。",
+    description: "面向主机迁移、数据库切换和站点回滚准备的迁移专题站，帮助你先把切换步骤和风险想清楚。",
     baseUrl: "https://fyrghdyrgh-dot.github.io/fy-migration-runbook/",
     brand: "fy migration runbook",
-    eyebrow: "lead family",
+    eyebrow: "migration playbook",
     heroTitle: "迁移不是一次复制，而是一套切换和回退方案。",
-    heroSubtitle: "把迁移准备、切换窗口和回滚判断拆成多个页面，适合承接迁移与切换相关搜索流量。",
+    heroSubtitle: "不管是换机房、换主机还是切数据库，先把切换窗口、验证步骤和回滚准备想清楚，迁移过程会稳很多。",
     primaryCta: { label: "查看迁移方案", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
     selectionNotes: ["先盘点现状。", "再规划切换窗口。", "最后准备回滚和验证。"],
-    trustPoints: ["迁移意图强", "适合运维与建站团队", "统一导向 1bgp"],
+    trustPoints: ["先看切换风险", "覆盖常见迁移场景", "方便继续规划下一步"],
     methodSteps: [
       { title: "盘点现有依赖", body: "域名、数据库、文件、定时任务和证书都应提前列清楚。" },
       { title: "缩小切换窗口", body: "切换窗口越清晰，业务中断时间越容易控制。" },
       { title: "预留回滚余地", body: "迁移前保留恢复点和旧环境，是降低风险的关键。" }
     ],
     faqs: [
-      { q: "为什么迁移类流量适合引流站？", a: "因为搜索意图非常明确，用户通常已经在准备做迁移决策。" },
-      { q: "迁移页应该直接卖套餐吗？", a: "更好的方式是先帮用户判断风险，再引到方案页。" }
+      { q: "为什么迁移前要先做准备页？", a: "因为迁移最怕临时决策，提前把关键步骤列清楚，执行时会更稳。" },
+      { q: "迁移是不是只要复制过去就行？", a: "不是，切换窗口、验证顺序和回滚准备同样重要。" }
     ]
   },
   offers: [

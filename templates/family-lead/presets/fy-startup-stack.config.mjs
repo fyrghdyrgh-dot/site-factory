@@ -1,24 +1,24 @@
 export default {
   site: {
     title: "fy 起步配置组合",
-    description: "围绕入门建站、MVP 部署和轻量业务起步整理的组合型引流站，适合承接“怎么开始配”的搜索流量。",
+    description: "面向入门建站、MVP 部署和轻量业务起步的配置指南站，帮助你先配出能稳定跑起来的第一套方案。",
     baseUrl: "https://fyrghdyrgh-dot.github.io/fy-startup-stack/",
     brand: "fy startup stack",
-    eyebrow: "lead family",
+    eyebrow: "starter stack guide",
     heroTitle: "起步阶段先求能跑稳，再谈一步到位。",
-    heroSubtitle: "用业务阶段来拆方案页，把资源、带宽、系统和后续扩展说清楚，适合起步配置类流量。",
+    heroSubtitle: "如果你刚起步，不确定第一台机器该怎么买，可以先从业务阶段和最小可用配置开始判断，再慢慢预留后续升级空间。",
     primaryCta: { label: "查看起步方案", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
     selectionNotes: ["先看业务阶段。", "再看最小可用配置。", "最后预留扩展空间。"],
-    trustPoints: ["适合起步型搜索", "强调最小可用", "统一导向 1bgp"],
+    trustPoints: ["先保证能跑稳", "强调最小可用配置", "方便后续升级"],
     methodSteps: [
       { title: "确认业务是不是刚开始", body: "起步项目不需要一开始就按成熟站点配置，重点是先跑稳。" },
       { title: "先匹配主要瓶颈", body: "有的场景重带宽，有的重存储，有的重运维便利性。" },
       { title: "保留升级路径", body: "起步配置应考虑三个月到半年的扩展方向。" }
     ],
     faqs: [
-      { q: "起步是不是应该选最便宜？", a: "不一定，最便宜配置如果无法平稳支撑业务，后续成本反而更高。" },
-      { q: "为什么组合站适合引流？", a: "因为很多用户搜索的不是单产品，而是怎么配一套可用方案。" }
+      { q: "起步是不是应该只看最便宜？", a: "不一定，价格重要，但能不能稳定跑起来更重要。" },
+      { q: "为什么要先看组合而不是单项参数？", a: "因为很多起步问题不是单个参数不够，而是整套配置是否搭得合理。" }
     ]
   },
   offers: [

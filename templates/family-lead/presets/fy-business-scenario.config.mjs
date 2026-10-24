@@ -1,24 +1,24 @@
 export default {
   site: {
     title: "fy 业务场景方案",
-    description: "围绕跨境电商、API 服务和下载分发等具体业务场景整理的场景型引流站，适合承接高商业意图场景词。",
+    description: "面向跨境电商、API 服务和下载分发等业务场景的服务器选择站，帮助你先按业务判断，再看更合适的部署方向。",
     baseUrl: "https://fyrghdyrgh-dot.github.io/fy-business-scenario/",
     brand: "fy business scenario",
-    eyebrow: "lead family",
+    eyebrow: "business hosting guide",
     heroTitle: "先判断你在跑什么业务，再选节点和配置。",
-    heroSubtitle: "把常见业务场景拆成独立页面，让用户用自己的业务来判断，而不是被泛化的套餐词带偏。",
+    heroSubtitle: "如果你做的是跨境电商、接口服务或下载分发，可以直接从对应场景进入，少走弯路，也更容易找到适合自己的部署思路。",
     primaryCta: { label: "查看场景方案", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
     selectionNotes: ["先看业务模式。", "再看核心访问路径。", "最后核对线路与资源。"],
-    trustPoints: ["按业务场景拆页", "商业意图更强", "统一导向 1bgp"],
+    trustPoints: ["按真实业务来选", "覆盖常见高价值场景", "提供下一步参考"],
     methodSteps: [
       { title: "定义主业务动作", body: "是下单、下载、接口调用还是内容浏览，会决定方案重点。" },
       { title: "识别高风险环节", body: "支付、提交、登录和接口响应通常更值得优先优化。" },
       { title: "围绕业务选型", body: "不要先从服务器参数出发，而要先从业务表现目标出发。" }
     ],
     faqs: [
-      { q: "场景页为什么适合引流？", a: "因为搜索用户往往会带着具体业务问题来，而不是只搜产品名。" },
-      { q: "场景页会不会过窄？", a: "只要场景划分清楚，反而更容易承接高质量流量。" }
+      { q: "为什么建议先按场景看？", a: "因为不同业务最看重的环节不同，先看自己的场景，判断会更快更准。" },
+      { q: "场景会不会分得太细？", a: "不会，先看最接近自己的那一类，通常比直接看参数更容易找到方向。" }
     ]
   },
   offers: [

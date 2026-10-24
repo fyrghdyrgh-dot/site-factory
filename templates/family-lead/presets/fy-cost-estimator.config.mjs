@@ -1,24 +1,24 @@
 export default {
   site: {
     title: "fy 预算配置规划",
-    description: "围绕带宽预算、资源预估和扩容节奏整理的预算型引流站，适合承接“怎么配预算”的高意图搜索。",
+    description: "帮助你判断带宽预算、资源预估和扩容节奏的配置规划站，适合先把预算和真实需求对齐。",
     baseUrl: "https://fyrghdyrgh-dot.github.io/fy-cost-estimator/",
     brand: "fy cost estimator",
-    eyebrow: "lead family",
+    eyebrow: "budget and sizing",
     heroTitle: "先把预算和资源关系讲清楚，再谈买哪种套餐。",
-    heroSubtitle: "把预算、带宽、流量峰值和扩容策略拆成独立页面，适合承接预算规划与配置预估类流量。",
+    heroSubtitle: "如果你不确定带宽、CPU、内存和预算该怎么配，可以先按访问量、峰值和扩容节奏来判断，避免一开始就配错方向。",
     primaryCta: { label: "查看预算方案", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
     selectionNotes: ["先看访问量级。", "再看峰值和波动。", "最后留出扩容余量。"],
-    trustPoints: ["预算规划意图强", "适合配置预估搜索", "统一导向 1bgp"],
+    trustPoints: ["先看真实使用量", "覆盖常见预算问题", "方便规划后续扩容"],
     methodSteps: [
       { title: "估算真实使用量", body: "不要只凭感觉设预算，先把访问、资源和波动范围列出来。" },
       { title: "区分日常与峰值", body: "很多业务平时轻量，但活动或投放会出现明显突刺。" },
       { title: "预留升级空间", body: "预算不是一次定死，而是规划升级节奏。" }
     ],
     faqs: [
-      { q: "预算页适合做引流吗？", a: "适合，因为搜这类词的用户通常已经进入配置决策阶段。" },
-      { q: "预算规划是不是只能做工具？", a: "不一定，结构清晰的方案页一样很有承接力。" }
+      { q: "为什么预算要先算峰值？", a: "因为很多问题都是在活动或推广窗口出现的，只看平时流量容易低估需求。" },
+      { q: "预算规划是不是一次定死？", a: "不是，更稳的做法是先配出合适起点，再给后续升级留空间。" }
     ]
   },
   offers: [

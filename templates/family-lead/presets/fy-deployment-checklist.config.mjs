@@ -1,24 +1,24 @@
 export default {
   site: {
     title: "fy 部署清单专题",
-    description: "围绕上线前检查、部署步骤、监控与备份准备整理的清单型引流站，适合承接部署类高意图搜索。",
+    description: "面向上线前检查、部署步骤、监控和备份准备的清单专题站，帮助你把关键步骤先核对清楚。",
     baseUrl: "https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/",
     brand: "fy deployment checklist",
-    eyebrow: "lead family",
+    eyebrow: "launch checklist",
     heroTitle: "先把上线步骤走清楚，再看服务器该怎么买。",
-    heroSubtitle: "用清单建立信任，把部署、备份、监控和回滚准备拆成多个方案页，适合承接部署类搜索流量。",
+    heroSubtitle: "上线前把域名、端口、备份、监控和回滚这些关键项先确认清楚，后面会少很多返工，也更不容易在正式发布时出问题。",
     primaryCta: { label: "查看部署专题", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
     selectionNotes: ["先确认上线目标。", "再检查监控备份。", "最后核对资源和回滚。"],
-    trustPoints: ["清单式结构", "适合收藏和搜索", "统一导向 1bgp"],
+    trustPoints: ["步骤清晰", "适合上线前核对", "覆盖常见风险点"],
     methodSteps: [
       { title: "确认上线目标", body: "官网、接口、下载站和商城，部署重点并不一样。" },
       { title: "建立回滚意识", body: "真正稳妥的上线一定包含失败后的回退方案。" },
       { title: "检查长期维护", body: "监控、告警和备份不是上线后才补，而是上线前就该确认。" }
     ],
     faqs: [
-      { q: "清单页适合做引流吗？", a: "很适合，因为用户搜索时本身就在找步骤和检查项。" },
-      { q: "清单页会不会转化弱？", a: "只要下一步资源入口自然，通常会比硬推广告页更稳。" }
+      { q: "为什么上线前要先看清单？", a: "因为很多线上问题不是不会做，而是做的时候漏了一步，提前核对更稳。" },
+      { q: "清单会不会太基础？", a: "不会，越是常见的小项，越容易在上线当天被忽略。" }
     ]
   },
   offers: [

@@ -1,24 +1,24 @@
 export default {
   site: {
     title: "fy 服务器 FAQ 专题",
-    description: "围绕服务器选型、线路误区、迁移问题和部署疑问整理的 FAQ 型引流站，适合覆盖高意图长尾流量。",
+    description: "围绕服务器选型、线路区别、迁移问题和部署疑问整理的常见问题站，适合先把高频疑问看明白。",
     baseUrl: "https://fyrghdyrgh-dot.github.io/fy-ops-faq/",
     brand: "fy ops faq",
-    eyebrow: "lead family",
+    eyebrow: "server FAQ",
     heroTitle: "把常见问题拆开讲，往往比堆一页卖点更容易转化。",
-    heroSubtitle: "围绕误区、疑虑和常见判断问题整理 FAQ 专题页，适合承接高意图长尾搜索和问题词流量。",
+    heroSubtitle: "如果你对服务器选型、线路区别、迁移风险还有疑问，可以先从这些高频问题开始看，先把关键判断点弄清楚。",
     primaryCta: { label: "查看 FAQ 专题", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
     selectionNotes: ["先回答用户疑虑。", "再补判断方法。", "最后引到方案页。"],
-    trustPoints: ["长尾覆盖强", "适合误区型搜索", "统一导向 1bgp"],
+    trustPoints: ["先看高频问题", "覆盖常见误区与疑问", "方便继续深入了解"],
     methodSteps: [
       { title: "先拆问题类型", body: "价格疑虑、线路误区、系统选择和迁移风险可以分开组织。" },
       { title: "保持短答案", body: "FAQ 的关键是快速解决疑问，而不是把每个问题写成大长文。" },
       { title: "自然接下一步", body: "回答问题后，再给进一步方案入口，承接会更自然。" }
     ],
     faqs: [
-      { q: "FAQ 页会不会太散？", a: "只要专题边界清楚，FAQ 反而很适合覆盖高意图长尾词。" },
-      { q: "FAQ 页适合导流吗？", a: "适合，尤其是用户先有疑问再做购买判断的场景。" }
+      { q: "FAQ 会不会看起来太碎？", a: "不会，只要问题分类清楚，反而更适合快速解决疑问。" },
+      { q: "为什么先看 FAQ 更有用？", a: "因为很多时候你缺的不是一整篇长文，而是把最关键的几个问题先想明白。" }
     ]
   },
   offers: [

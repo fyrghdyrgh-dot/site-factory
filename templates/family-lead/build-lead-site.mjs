@@ -122,8 +122,8 @@ ${renderMeta({
     </section>
     <section class="shell offer-shell" id="offers">
       <div class="section-head">
-        <p class="eyebrow">lead pages</p>
-        <h2>按业务入口拆分的方案页</h2>
+        <p class="eyebrow">solutions</p>
+        <h2>先看最接近你情况的页面</h2>
       </div>
       <div class="offer-grid">
         ${config.offers.map(renderOfferCard).join("")}
@@ -131,8 +131,8 @@ ${renderMeta({
     </section>
     <section class="shell method-shell" id="method">
       <div class="section-head">
-        <p class="eyebrow">method</p>
-        <h2>先判断业务，再看方案，不靠堆词拼页面。</h2>
+        <p class="eyebrow">how to choose</p>
+        <h2>如果你还没想清楚，可以先按这几个步骤判断。</h2>
       </div>
       <div class="method-grid">
         ${config.site.methodSteps.map((step, index) => `<article><span>${index + 1}</span><h3>${escapeHtml(step.title)}</h3><p>${escapeHtml(step.body)}</p></article>`).join("")}
@@ -140,8 +140,8 @@ ${renderMeta({
     </section>
     <section class="shell faq-shell" id="faq">
       <div class="section-head">
-        <p class="eyebrow">faq</p>
-        <h2>访问者最常问的问题</h2>
+        <p class="eyebrow">common questions</p>
+        <h2>先把大家最常问的几个问题说清楚</h2>
       </div>
       <div class="faq-grid">
         ${config.site.faqs.map((faq) => `<article><h3>${escapeHtml(faq.q)}</h3><p>${escapeHtml(faq.a)}</p></article>`).join("")}

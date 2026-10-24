@@ -1,24 +1,24 @@
 export default {
   site: {
     title: "fy 托管与自管比较",
-    description: "围绕托管、自管和半托管方案差异整理的引流站，适合承接 WordPress 托管与运维比较类搜索。",
+    description: "帮助你比较托管、自管和半托管差异的选择站，适合先看团队能力，再判断哪种维护方式更省心。",
     baseUrl: "https://fyrghdyrgh-dot.github.io/fy-managed-hosting/",
     brand: "fy managed hosting",
-    eyebrow: "lead family",
+    eyebrow: "hosting compare",
     heroTitle: "不是所有团队都适合自己扛全部运维。",
-    heroSubtitle: "把自管、托管和半托管方案拆开比较，让用户先判断团队能力，再看具体资源和服务方案。",
+    heroSubtitle: "如果你在自管、托管和半托管之间犹豫，可以先看团队有没有人维护、能接受多快响应，以及愿意投入多少精力。",
     primaryCta: { label: "查看比较方案", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
     selectionNotes: ["先看团队有没有人维护。", "再看故障响应要求。", "最后看预算和服务边界。"],
-    trustPoints: ["托管比较意图强", "适合运维决策流量", "统一导向 1bgp"],
+    trustPoints: ["先看团队维护能力", "覆盖常见托管选择问题", "方便继续比较方案"],
     methodSteps: [
       { title: "看团队运维能力", body: "有没有稳定的人负责维护，会直接影响方案选择。" },
       { title: "看故障容忍度", body: "业务越不能停，越要重视响应和恢复边界。" },
       { title: "看长期成本", body: "自管不一定更省，很多成本会转移到人力和响应上。" }
     ],
     faqs: [
-      { q: "托管一定更贵吗？", a: "表面成本可能更高，但总成本要一起看人力和故障成本。" },
-      { q: "半托管适合谁？", a: "适合需要一定灵活度，但又不想全靠自己维护的团队。" }
+      { q: "托管一定更贵吗？", a: "表面价格可能更高，但总成本还要一起看人力、时间和故障处理成本。" },
+      { q: "半托管适合谁？", a: "适合想保留一定灵活度，但又不想把所有维护都自己扛下来的团队。" }
     ]
   },
   offers: [

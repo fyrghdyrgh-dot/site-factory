@@ -1,24 +1,24 @@
 export default {
   site: {
     title: "fy 系统适配专题",
-    description: "围绕 Linux、Windows、组件兼容和数据库依赖整理的适配型引流站，适合承接系统选择类搜索。",
+    description: "帮助你判断 Linux、Windows、组件兼容和数据库依赖是否匹配的系统选择站，先看依赖，再决定环境。",
     baseUrl: "https://fyrghdyrgh-dot.github.io/fy-system-compatibility/",
     brand: "fy system compatibility",
-    eyebrow: "lead family",
+    eyebrow: "system compatibility",
     heroTitle: "先看软件栈和组件依赖，再决定系统和服务器方案。",
-    heroSubtitle: "把 Linux / Windows、数据库依赖和远程桌面需求拆成独立页面，适合承接系统适配与兼容性流量。",
+    heroSubtitle: "如果你在 Linux、Windows、.NET、数据库和远程桌面环境之间犹豫，这里会先帮你把依赖和维护习惯理清楚，再决定更合适的系统方向。",
     primaryCta: { label: "查看适配专题", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
     selectionNotes: ["先看组件依赖。", "再看团队习惯。", "最后核对运维成本。"],
-    trustPoints: ["适配意图清晰", "适合系统选择词", "统一导向 1bgp"],
+    trustPoints: ["先看软件依赖", "覆盖常见系统选择问题", "方便继续判断环境方案"],
     methodSteps: [
       { title: "列出必须依赖", body: "数据库、中间件、桌面环境和框架版本都要先列清楚。" },
       { title: "看团队维护习惯", body: "团队更熟悉哪一套，会直接影响后续维护成本。" },
       { title: "看后续扩展", body: "不是能装上就够，还要看后续更新、备份和监控是否方便。" }
     ],
     faqs: [
-      { q: "适配页适合引流吗？", a: "很适合，因为用户通常是在做明确系统决策时搜索这类问题。" },
-      { q: "是不是默认 Linux 更好？", a: "不一定，要回到业务依赖和团队能力上判断。" }
+      { q: "是不是默认 Linux 就更好？", a: "不一定，还是要看你的软件依赖、团队习惯和后续维护成本。" },
+      { q: "为什么系统选择不能只看价格？", a: "因为兼容性、维护效率和后续扩展，往往比表面价格更影响长期体验。" }
     ]
   },
   offers: [

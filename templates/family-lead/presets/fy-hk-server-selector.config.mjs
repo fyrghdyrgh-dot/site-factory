@@ -1,24 +1,24 @@
 export default {
   site: {
     title: "fy 地区节点推荐",
-    description: "围绕香港、新加坡、日本和美国节点选择整理的地区推荐型引流站，适合承接“哪个地区更适合我”的搜索意图。",
+    description: "帮助你在香港、新加坡、日本和美国等节点之间做选择的地区指南站，适合先看访问区域，再判断部署位置。",
     baseUrl: "https://fyrghdyrgh-dot.github.io/fy-hk-server-selector/",
     brand: "fy region selector",
-    eyebrow: "lead family",
+    eyebrow: "region and node guide",
     heroTitle: "先看用户在哪，再看服务器放哪。",
-    heroSubtitle: "把常见地区选择问题拆成独立方案页，适合承接节点选择、访问区域和业务部署类流量。",
+    heroSubtitle: "如果你在香港、新加坡、日本和美国节点之间犹豫，可以先看访问区域、延迟表现和后续扩展，再决定把业务放在哪。",
     primaryCta: { label: "查看地区方案", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
     selectionNotes: ["先看访问地区分布。", "再看延迟和线路稳定性。", "最后看预算和扩容空间。"],
-    trustPoints: ["按地区拆页", "适合节点选择搜索", "统一导向 1bgp"],
+    trustPoints: ["先按访问区域判断", "覆盖常见节点选择问题", "方便继续比较方案"],
     methodSteps: [
       { title: "看主要访问区域", body: "如果核心访客集中在大陆、东南亚或全球，不同节点优先级会完全不同。" },
       { title: "看业务波动", body: "下载、媒体和活动流量更看重高峰期稳定性，而不仅是平均延迟。" },
       { title: "看扩展需求", body: "后续是否要加 CDN、对象存储或多节点部署，也会影响初始节点选择。" }
     ],
     faqs: [
-      { q: "是不是香港节点最通用？", a: "不一定，香港适合很多跨境业务，但不是所有业务都应默认选香港。" },
-      { q: "节点选择主要看 ping 吗？", a: "不能只看一次测速，更要看访问人群、链路质量和高峰期表现。" }
+      { q: "是不是默认选香港就行？", a: "不一定，香港适合很多场景，但真正要看你的访客主要在哪里、业务更重什么体验。" },
+      { q: "节点选择主要看 ping 吗？", a: "不能只看一次测速，更要看访问人群、链路质量和高峰期是否稳定。" }
     ]
   },
   offers: [
