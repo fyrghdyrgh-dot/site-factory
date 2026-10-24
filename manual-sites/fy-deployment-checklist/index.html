@@ -6,24 +6,33 @@
   <title>fy 部署清单专题</title>
   <meta name="description" content="面向上线前检查、部署步骤、监控和备份准备的清单专题站，帮助你把关键步骤先核对清楚。">
   <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="fy 部署清单专题">
   <meta property="og:title" content="fy 部署清单专题">
   <meta property="og:description" content="面向上线前检查、部署步骤、监控和备份准备的清单专题站，帮助你把关键步骤先核对清楚。">
   <meta property="og:url" content="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:title" content="fy 部署清单专题">
+  <meta name="twitter:description" content="面向上线前检查、部署步骤、监控和备份准备的清单专题站，帮助你把关键步骤先核对清楚。">
   <link rel="canonical" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/">
   <link rel="stylesheet" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/assets/lead.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"fy 部署清单专题","url":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/","description":"面向上线前检查、部署步骤、监控和备份准备的清单专题站，帮助你把关键步骤先核对清楚。","hasPart":[{"@type":"WebPage","name":"VPS 上线检查页","url":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/vps-launch-checklist/"},{"@type":"WebPage","name":"备份与监控检查页","url":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/backup-monitoring-checklist/"},{"@type":"WebPage","name":"回滚准备专题页","url":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/rollback-readiness-guide/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"fy 部署清单专题","url":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/","description":"面向上线前检查、部署步骤、监控和备份准备的清单专题站，帮助你把关键步骤先核对清楚。","inLanguage":"zh-CN","dateModified":"2026-10-24T05:45:05.841Z","hasPart":[{"@type":"WebPage","name":"VPS 上线检查页","url":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/vps-launch-checklist/"},{"@type":"WebPage","name":"备份与监控检查页","url":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/backup-monitoring-checklist/"},{"@type":"WebPage","name":"回滚准备专题页","url":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/rollback-readiness-guide/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","url":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/","mainEntity":[{"@type":"Question","name":"为什么上线前要先看清单？","acceptedAnswer":{"@type":"Answer","text":"因为很多线上问题不是不会做，而是做的时候漏了一步，提前核对更稳。"}},{"@type":"Question","name":"清单会不会太基础？","acceptedAnswer":{"@type":"Answer","text":"不会，越是常见的小项，越容易在上线当天被忽略。"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"fy 部署清单专题","item":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/"}]}</script>
 </head>
 <body>
   <header class="topbar">
     <div class="shell topbar-row">
-      <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/">fy deployment checklist</a>
+      <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/">fy 部署清单专题</a>
       <nav>
-        <a href="#offers">方案页</a>
-        <a href="#method">筛选方法</a>
+        <a href="#offers">方案总览</a>
+        <a href="#method">如何判断</a>
         <a href="#faq">常见问题</a>
       </nav>
-      <a class="button ghost" href="#offers">查看部署专题</a>
+      <a class="button ghost" href="#offers">查看可选方案</a>
     </div>
   </header>
   <main>
@@ -33,12 +42,12 @@
         <h1>先把上线步骤走清楚，再看服务器该怎么买。</h1>
         <p class="hero-text">上线前把域名、端口、备份、监控和回滚这些关键项先确认清楚，后面会少很多返工，也更不容易在正式发布时出问题。</p>
         <div class="button-row">
-          <a class="button" href="#offers">查看部署专题</a>
-          <a class="button ghost" href="https://www.1bgp.com/">前往 1bgp</a>
+          <a class="button" href="#offers">查看可选方案</a>
+          <a class="button ghost" href="https://www.1bgp.com/">获取参考资源</a>
         </div>
       </div>
       <aside class="hero-panel">
-        <h2>挑选逻辑</h2>
+        <h2>选择建议</h2>
         <ul>
           <li>先确认上线目标。</li><li>再检查监控备份。</li><li>最后核对资源和回滚。</li>
         </ul>
@@ -61,8 +70,8 @@
       <li>第一次部署项目</li><li>上线流程不固定</li><li>需要快速核对基础项</li>
     </ul>
     <div class="button-row compact">
-      <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/vps-launch-checklist/">查看方案</a>
-      <a class="text-link" href="https://www.1bgp.com/">查看 1bgp 上线资源</a>
+      <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/vps-launch-checklist/">查看详情</a>
+      <a class="text-link" href="https://www.1bgp.com/">获取参考方案</a>
     </div>
   </article><article class="offer-card">
     <p class="offer-audience">需要长期维护站点的团队</p>
@@ -72,8 +81,8 @@
       <li>已有线上业务</li><li>担心数据丢失或故障发现太晚</li><li>需要多人协作维护</li>
     </ul>
     <div class="button-row compact">
-      <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/backup-monitoring-checklist/">查看方案</a>
-      <a class="text-link" href="https://www.1bgp.com/">查看 1bgp 运维资源</a>
+      <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/backup-monitoring-checklist/">查看详情</a>
+      <a class="text-link" href="https://www.1bgp.com/">获取参考方案</a>
     </div>
   </article><article class="offer-card">
     <p class="offer-audience">活动、改版或迁移项目团队</p>
@@ -83,8 +92,8 @@
       <li>涉及改版或迁移</li><li>发布时间窗口短</li><li>故障成本较高</li>
     </ul>
     <div class="button-row compact">
-      <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/rollback-readiness-guide/">查看方案</a>
-      <a class="text-link" href="https://www.1bgp.com/">查看 1bgp 部署方案</a>
+      <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/rollback-readiness-guide/">查看详情</a>
+      <a class="text-link" href="https://www.1bgp.com/">获取参考方案</a>
     </div>
   </article>
       </div>

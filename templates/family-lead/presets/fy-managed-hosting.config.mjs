@@ -47,7 +47,7 @@ export default {
     },
     {
       slug: "managed-wordpress-plan",
-      title: "托管 WordPress 方案页",
+      title: "托管 WordPress 指南",
       audience: "内容站和营销站团队",
       summary: "适合更关注内容更新和转化，不希望自己承担太多底层运维工作的团队。",
       promise: "托管 WordPress 的价值不只是省事，更在于把备份、更新和恢复流程做得更稳定。",
@@ -70,7 +70,7 @@ export default {
     },
     {
       slug: "semi-managed-hosting",
-      title: "半托管折中方案页",
+      title: "半托管折中方案",
       audience: "既要灵活又想减轻维护压力的团队",
       summary: "适合仍需一定控制权，但不想把所有底层工作都压在内部团队上的业务。",
       promise: "半托管的价值在于把最容易出问题的基础维护交出去，同时保留关键业务的可控性。",

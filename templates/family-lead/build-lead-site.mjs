@@ -10,6 +10,8 @@ if (!configPath || !outputDir) {
 }
 
 const { default: config } = await import(pathToFileURL(configPath).href);
+const buildIso = new Date().toISOString();
+const buildDate = buildIso.slice(0, 10);
 
 rmSync(outputDir, { recursive: true, force: true });
 mkdirSync(path.join(outputDir, "assets"), { recursive: true });
@@ -44,38 +46,94 @@ function absoluteUrl(relativePath = "") {
   return new URL(relativePath, config.site.baseUrl).toString();
 }
 
-function renderMeta({ title, description, canonical, jsonLd = "" }) {
+function renderMeta({ title, description, canonical, jsonLdEntries = [] }) {
   return `  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
   <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="${escapeHtml(config.site.title)}">
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${escapeHtml(canonical)}">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:title" content="${escapeHtml(title)}">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
   <link rel="canonical" href="${escapeHtml(canonical)}">
   <link rel="stylesheet" href="${absoluteUrl("assets/lead.css")}">
-${jsonLd ? `  <script type="application/ld+json">${jsonLd}</script>` : ""}`;
+${renderJsonLdScripts(jsonLdEntries)}`;
+}
+
+function renderJsonLdScripts(entries) {
+  return entries
+    .filter(Boolean)
+    .map((entry) => `  <script type="application/ld+json">${JSON.stringify(entry)}</script>`)
+    .join("\n");
+}
+
+function buildFaqJsonLd(faqs, canonical) {
+  if (!faqs?.length) {
+    return null;
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    url: canonical,
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a
+      }
+    }))
+  };
+}
+
+function buildBreadcrumbJsonLd(items) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url
+    }))
+  };
+}
+
+function siteBrandLabel() {
+  return config.site.title;
 }
 
 function renderHomePage() {
-  const jsonLd = JSON.stringify(
+  const canonical = absoluteUrl();
+  const jsonLdEntries = [
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       name: config.site.title,
-      url: absoluteUrl(),
+      url: canonical,
       description: config.site.description,
+      inLanguage: "zh-CN",
+      dateModified: buildIso,
       hasPart: config.offers.map((offer) => ({
         "@type": "WebPage",
         name: offer.title,
         url: absoluteUrl(`${offer.slug}/`)
       }))
     },
-    null,
-    0
-  );
+    buildFaqJsonLd(config.site.faqs, canonical),
+    buildBreadcrumbJsonLd([
+      { name: config.site.title, url: canonical }
+    ])
+  ];
 
   return `<!doctype html>
 <html lang="zh-CN">
@@ -83,20 +141,20 @@ function renderHomePage() {
 ${renderMeta({
   title: config.site.title,
   description: config.site.description,
-  canonical: absoluteUrl(),
-  jsonLd
+  canonical,
+  jsonLdEntries
 })}
 </head>
 <body>
   <header class="topbar">
     <div class="shell topbar-row">
-      <a class="brand" href="${absoluteUrl()}">${escapeHtml(config.site.brand)}</a>
+      <a class="brand" href="${absoluteUrl()}">${escapeHtml(siteBrandLabel())}</a>
       <nav>
-        <a href="#offers">方案页</a>
-        <a href="#method">筛选方法</a>
+        <a href="#offers">方案总览</a>
+        <a href="#method">如何判断</a>
         <a href="#faq">常见问题</a>
       </nav>
-      <a class="button ghost" href="${escapeHtml(config.site.primaryCta.href)}">${escapeHtml(config.site.primaryCta.label)}</a>
+      <a class="button ghost" href="${escapeHtml(config.site.primaryCta.href)}">查看可选方案</a>
     </div>
   </header>
   <main>
@@ -106,12 +164,12 @@ ${renderMeta({
         <h1>${escapeHtml(config.site.heroTitle)}</h1>
         <p class="hero-text">${escapeHtml(config.site.heroSubtitle)}</p>
         <div class="button-row">
-          <a class="button" href="#offers">${escapeHtml(config.site.primaryCta.label)}</a>
-          <a class="button ghost" href="${escapeHtml(config.site.secondaryCta.href)}">${escapeHtml(config.site.secondaryCta.label)}</a>
+          <a class="button" href="#offers">查看可选方案</a>
+          <a class="button ghost" href="${escapeHtml(config.site.secondaryCta.href)}">获取参考资源</a>
         </div>
       </div>
       <aside class="hero-panel">
-        <h2>挑选逻辑</h2>
+        <h2>选择建议</h2>
         <ul>
           ${config.site.selectionNotes.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
         </ul>
@@ -161,25 +219,31 @@ function renderOfferCard(offer) {
       ${offer.signals.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
     </ul>
     <div class="button-row compact">
-      <a class="button" href="${absoluteUrl(`${offer.slug}/`)}">查看方案</a>
-      <a class="text-link" href="${escapeHtml(offer.cta.href)}">${escapeHtml(offer.cta.label)}</a>
+      <a class="button" href="${absoluteUrl(`${offer.slug}/`)}">查看详情</a>
+      <a class="text-link" href="${escapeHtml(offer.cta.href)}">获取参考方案</a>
     </div>
   </article>`;
 }
 
 function renderOfferPage(offer) {
-  const jsonLd = JSON.stringify(
+  const canonical = absoluteUrl(`${offer.slug}/`);
+  const jsonLdEntries = [
     {
       "@context": "https://schema.org",
       "@type": "Service",
       name: offer.title,
-      url: absoluteUrl(`${offer.slug}/`),
+      url: canonical,
       description: offer.summary,
+      inLanguage: "zh-CN",
+      dateModified: buildIso,
       audience: { "@type": "Audience", audienceType: offer.audience }
     },
-    null,
-    0
-  );
+    buildFaqJsonLd(offer.faqs, canonical),
+    buildBreadcrumbJsonLd([
+      { name: config.site.title, url: absoluteUrl() },
+      { name: offer.title, url: canonical }
+    ])
+  ];
 
   return `<!doctype html>
 <html lang="zh-CN">
@@ -187,16 +251,20 @@ function renderOfferPage(offer) {
 ${renderMeta({
   title: `${offer.title} - ${config.site.title}`,
   description: offer.summary,
-  canonical: absoluteUrl(`${offer.slug}/`),
-  jsonLd
+  canonical,
+  jsonLdEntries
 })}
 </head>
 <body>
   <header class="topbar">
     <div class="shell topbar-row">
-      <a class="brand" href="${absoluteUrl()}">${escapeHtml(config.site.brand)}</a>
-      <nav><a href="${absoluteUrl()}#offers">返回方案目录</a></nav>
-      <a class="button ghost" href="${escapeHtml(offer.cta.href)}">${escapeHtml(offer.cta.label)}</a>
+      <a class="brand" href="${absoluteUrl()}">${escapeHtml(siteBrandLabel())}</a>
+      <nav>
+        <a href="${absoluteUrl()}">返回首页</a>
+        <a href="#signals">适合人群</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+      <a class="button ghost" href="${escapeHtml(offer.cta.href)}">获取参考方案</a>
     </div>
   </header>
   <main class="shell offer-detail">
@@ -207,33 +275,48 @@ ${renderMeta({
       <div class="compare-grid">
         ${offer.compare.map((item) => `<article><strong>${escapeHtml(item.value)}</strong><span>${escapeHtml(item.label)}</span></article>`).join("")}
       </div>
-      ${offer.sections.map((section) => `<section class="content-block"><h2>${escapeHtml(section.title)}</h2><p>${escapeHtml(section.body)}</p></section>`).join("")}
       <section class="content-block">
-        <h2>常见判断信号</h2>
+        <h2>这页适合哪类情况</h2>
+        <p>${escapeHtml(offer.summary)}</p>
+      </section>
+      ${offer.sections.map((section) => `<section class="content-block"><h2>${escapeHtml(section.title)}</h2><p>${escapeHtml(section.body)}</p></section>`).join("")}
+      <section class="content-block" id="signals">
+        <h2>如果你符合这些情况，就值得重点看</h2>
         <ul class="signal-list">
           ${offer.signals.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
         </ul>
       </section>
-      <section class="content-block">
+      <section class="content-block" id="faq">
         <h2>常见问题</h2>
         <div class="faq-grid">
           ${offer.faqs.map((faq) => `<article><h3>${escapeHtml(faq.q)}</h3><p>${escapeHtml(faq.a)}</p></article>`).join("")}
         </div>
       </section>
+      <section class="content-block">
+        <h2>你也可以继续看看这些页面</h2>
+        <div class="related-grid">
+          ${renderRelatedOffers(offer.slug)}
+        </div>
+      </section>
     </section>
     <aside class="offer-sidebar">
       <div class="sidebar-card">
-        <h2>适合对象</h2>
+        <h2>先看结论</h2>
         <p>${escapeHtml(offer.summary)}</p>
       </div>
       <div class="sidebar-card">
-        <h2>重点收益</h2>
+        <h2>这页重点关注</h2>
         <ul class="signal-list">
           ${offer.benefits.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
         </ul>
       </div>
       <div class="sidebar-card">
-        <a class="button" href="${escapeHtml(offer.cta.href)}">${escapeHtml(offer.cta.label)}</a>
+        <h2>下一步</h2>
+        <p>如果这页内容和你的情况接近，可以继续查看参考方案；如果还在比较，也可以回首页继续看其他页面。</p>
+        <div class="sidebar-actions">
+          <a class="button" href="${escapeHtml(offer.cta.href)}">前往 1bgp 查看参考方案</a>
+          <a class="text-link" href="${absoluteUrl()}">返回首页继续比较</a>
+        </div>
       </div>
     </aside>
   </main>
@@ -241,14 +324,34 @@ ${renderMeta({
 </html>`;
 }
 
+function renderRelatedOffers(currentSlug) {
+  return config.offers
+    .filter((offer) => offer.slug !== currentSlug)
+    .map(
+      (offer) => `<article class="related-card">
+  <p class="offer-audience">${escapeHtml(offer.audience)}</p>
+  <h3>${escapeHtml(offer.title)}</h3>
+  <p>${escapeHtml(offer.summary)}</p>
+  <a class="text-link" href="${absoluteUrl(`${offer.slug}/`)}">查看详情</a>
+</article>`
+    )
+    .join("");
+}
+
 function renderRobots() {
-  return `User-agent: *\nAllow: /\n\nSitemap: ${absoluteUrl("sitemap.xml")}\n`;
+  return `User-agent: *\nAllow: /\n\nUser-agent: Googlebot\nAllow: /\n\nSitemap: ${absoluteUrl("sitemap.xml")}\n`;
 }
 
 function renderSitemap() {
-  const urls = [absoluteUrl(), ...config.offers.map((offer) => absoluteUrl(`${offer.slug}/`))];
+  const urls = [
+    { url: absoluteUrl(), priority: "1.0" },
+    ...config.offers.map((offer) => ({ url: absoluteUrl(`${offer.slug}/`), priority: "0.8" }))
+  ];
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
-    .map((url) => `  <url><loc>${escapeHtml(url)}</loc></url>`)
+    .map(
+      ({ url, priority }) =>
+        `  <url><loc>${escapeHtml(url)}</loc><lastmod>${buildDate}</lastmod><changefreq>weekly</changefreq><priority>${priority}</priority></url>`
+    )
     .join("\n")}\n</urlset>\n`;
 }
 
@@ -302,7 +405,7 @@ h1 { font-size: clamp(36px, 6vw, 58px); max-width: 700px; }
 .offer-shell, .method-shell, .faq-shell { padding: 24px 0; }
 .section-head { display: grid; gap: 8px; margin-bottom: 18px; }
 .offer-grid, .method-grid, .faq-grid { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.offer-card, .method-grid article, .faq-grid article, .content-block, .sidebar-card { padding: 24px; }
+.offer-card, .method-grid article, .faq-grid article, .content-block, .sidebar-card, .related-card { padding: 24px; }
 .offer-audience { color: var(--accent-2); font-weight: 700; margin: 0 0 8px; }
 .compact { justify-content: space-between; flex-wrap: wrap; margin-top: 18px; }
 .text-link { padding: 0; min-height: auto; color: var(--muted); }
@@ -313,8 +416,18 @@ h1 { font-size: clamp(36px, 6vw, 58px); max-width: 700px; }
 .compare-grid article { padding: 18px; display: grid; gap: 10px; }
 .content-block { display: grid; gap: 12px; }
 .offer-sidebar { display: grid; gap: 16px; align-content: start; position: sticky; top: 16px; height: fit-content; }
+.related-grid { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.related-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  display: grid;
+  gap: 10px;
+}
+.related-card p { margin: 0; color: var(--muted); line-height: 1.7; }
+.sidebar-actions { display: grid; gap: 14px; margin-top: 8px; }
 @media (max-width: 900px) {
-  .hero, .offer-grid, .method-grid, .faq-grid, .offer-detail, .compare-grid { grid-template-columns: 1fr; }
+  .hero, .offer-grid, .method-grid, .faq-grid, .offer-detail, .compare-grid, .related-grid { grid-template-columns: 1fr; }
   .topbar-row, nav, .button-row, .trust-row { flex-direction: column; align-items: stretch; }
 }
 `;

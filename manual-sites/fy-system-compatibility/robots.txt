@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
 Sitemap: https://fyrghdyrgh-dot.github.io/fy-system-compatibility/sitemap.xml

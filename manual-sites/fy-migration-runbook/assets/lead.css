@@ -47,7 +47,7 @@ h1 { font-size: clamp(36px, 6vw, 58px); max-width: 700px; }
 .offer-shell, .method-shell, .faq-shell { padding: 24px 0; }
 .section-head { display: grid; gap: 8px; margin-bottom: 18px; }
 .offer-grid, .method-grid, .faq-grid { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.offer-card, .method-grid article, .faq-grid article, .content-block, .sidebar-card { padding: 24px; }
+.offer-card, .method-grid article, .faq-grid article, .content-block, .sidebar-card, .related-card { padding: 24px; }
 .offer-audience { color: var(--accent-2); font-weight: 700; margin: 0 0 8px; }
 .compact { justify-content: space-between; flex-wrap: wrap; margin-top: 18px; }
 .text-link { padding: 0; min-height: auto; color: var(--muted); }
@@ -58,7 +58,17 @@ h1 { font-size: clamp(36px, 6vw, 58px); max-width: 700px; }
 .compare-grid article { padding: 18px; display: grid; gap: 10px; }
 .content-block { display: grid; gap: 12px; }
 .offer-sidebar { display: grid; gap: 16px; align-content: start; position: sticky; top: 16px; height: fit-content; }
+.related-grid { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.related-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  display: grid;
+  gap: 10px;
+}
+.related-card p { margin: 0; color: var(--muted); line-height: 1.7; }
+.sidebar-actions { display: grid; gap: 14px; margin-top: 8px; }
 @media (max-width: 900px) {
-  .hero, .offer-grid, .method-grid, .faq-grid, .offer-detail, .compare-grid { grid-template-columns: 1fr; }
+  .hero, .offer-grid, .method-grid, .faq-grid, .offer-detail, .compare-grid, .related-grid { grid-template-columns: 1fr; }
   .topbar-row, nav, .button-row, .trust-row { flex-direction: column; align-items: stretch; }
 }

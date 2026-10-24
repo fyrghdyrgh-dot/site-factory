@@ -28,7 +28,7 @@ export default {
       audience: "正在选系统环境的团队",
       summary: "适合还在判断应该选 Linux 还是 Windows VPS 的业务和项目团队。",
       promise: "系统选择不应该只看价格，而要看软件栈、运维习惯和后续维护成本。",
-      benefits: ["承接高意图系统选择词", "适合多类业务", "利于引导到具体方案"],
+      benefits: ["适合系统选择场景", "适合多类业务", "方便继续比较具体方案"],
       signals: ["还没确定系统环境", "团队对两套系统理解不同", "业务有明确软件依赖"],
       compare: [
         { label: "核心问题", value: "哪套更适合" },
@@ -51,7 +51,7 @@ export default {
       audience: "依赖 Windows 栈或 .NET 组件的团队",
       summary: "适合要部署 .NET、SQL Server 或远程桌面维护环境的项目。",
       promise: "依赖 .NET 和 Windows 组件的项目，真正关键的是兼容性、权限和维护习惯，而不是盲目跟随通用建议。",
-      benefits: ["适合 Windows 栈业务", "强调组件兼容", "承接明确技术栈流量"],
+      benefits: ["适合 Windows 栈业务", "强调组件兼容", "方便继续比较明确技术栈方案"],
       signals: ["使用 .NET 或 SQL Server", "需要远程桌面维护", "团队熟悉 Windows 环境"],
       compare: [
         { label: "适配业务", value: "Windows 栈" },
@@ -74,7 +74,7 @@ export default {
       audience: "数据库依赖较重的业务团队",
       summary: "适合在 MySQL、PostgreSQL、SQL Server 等数据库环境上做配套部署判断的团队。",
       promise: "数据库相关的服务器选择，不只是看能不能跑，而是看性能、备份、恢复和团队维护习惯能否匹配。",
-      benefits: ["强调数据库依赖", "适合业务系统选型", "利于承接更深层方案页"],
+      benefits: ["强调数据库依赖", "适合业务系统选型", "方便继续看更细的部署方案"],
       signals: ["数据库是核心业务依赖", "需要考虑备份与恢复", "团队对不同数据库栈经验不一致"],
       compare: [
         { label: "适配业务", value: "数据密集型" },

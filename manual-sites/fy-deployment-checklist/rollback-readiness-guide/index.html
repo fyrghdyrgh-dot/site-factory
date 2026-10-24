@@ -6,20 +6,33 @@
   <title>回滚准备专题页 - fy 部署清单专题</title>
   <meta name="description" content="适合需要在发布时间窗口内做好失败回退准备的团队。">
   <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="fy 部署清单专题">
   <meta property="og:title" content="回滚准备专题页 - fy 部署清单专题">
   <meta property="og:description" content="适合需要在发布时间窗口内做好失败回退准备的团队。">
   <meta property="og:url" content="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/rollback-readiness-guide/">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:title" content="回滚准备专题页 - fy 部署清单专题">
+  <meta name="twitter:description" content="适合需要在发布时间窗口内做好失败回退准备的团队。">
   <link rel="canonical" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/rollback-readiness-guide/">
   <link rel="stylesheet" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/assets/lead.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"回滚准备专题页","url":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/rollback-readiness-guide/","description":"适合需要在发布时间窗口内做好失败回退准备的团队。","audience":{"@type":"Audience","audienceType":"活动、改版或迁移项目团队"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"回滚准备专题页","url":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/rollback-readiness-guide/","description":"适合需要在发布时间窗口内做好失败回退准备的团队。","inLanguage":"zh-CN","dateModified":"2026-10-24T05:45:05.841Z","audience":{"@type":"Audience","audienceType":"活动、改版或迁移项目团队"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","url":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/rollback-readiness-guide/","mainEntity":[{"@type":"Question","name":"简单上线也需要回滚吗？","acceptedAnswer":{"@type":"Answer","text":"只要影响真实用户，建议至少准备最小回滚路径。"}},{"@type":"Question","name":"回滚会不会太保守？","acceptedAnswer":{"@type":"Answer","text":"不是保守，而是降低试错成本。"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"fy 部署清单专题","item":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/"},{"@type":"ListItem","position":2,"name":"回滚准备专题页","item":"https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/rollback-readiness-guide/"}]}</script>
 </head>
 <body>
   <header class="topbar">
     <div class="shell topbar-row">
-      <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/">fy deployment checklist</a>
-      <nav><a href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/#offers">返回方案目录</a></nav>
-      <a class="button ghost" href="https://www.1bgp.com/">查看 1bgp 部署方案</a>
+      <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/">fy 部署清单专题</a>
+      <nav>
+        <a href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/">返回首页</a>
+        <a href="#signals">适合人群</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+      <a class="button ghost" href="https://www.1bgp.com/">获取参考方案</a>
     </div>
   </header>
   <main class="shell offer-detail">
@@ -30,33 +43,58 @@
       <div class="compare-grid">
         <article><strong>变更前</strong><span>适配阶段</span></article><article><strong>回退路径</strong><span>优先关注</span></article><article><strong>核对备份</strong><span>下一步</span></article>
       </div>
-      <section class="content-block"><h2>回滚比上线更应该提前写</h2><p>很多团队会写部署步骤，却没有把失败后如何撤回写清楚。</p></section><section class="content-block"><h2>回滚需要资源准备</h2><p>备用实例、旧版本包和恢复点都应提前确认。</p></section>
       <section class="content-block">
-        <h2>常见判断信号</h2>
+        <h2>这页适合哪类情况</h2>
+        <p>适合需要在发布时间窗口内做好失败回退准备的团队。</p>
+      </section>
+      <section class="content-block"><h2>回滚比上线更应该提前写</h2><p>很多团队会写部署步骤，却没有把失败后如何撤回写清楚。</p></section><section class="content-block"><h2>回滚需要资源准备</h2><p>备用实例、旧版本包和恢复点都应提前确认。</p></section>
+      <section class="content-block" id="signals">
+        <h2>如果你符合这些情况，就值得重点看</h2>
         <ul class="signal-list">
           <li>涉及改版或迁移</li><li>发布时间窗口短</li><li>故障成本较高</li>
         </ul>
       </section>
-      <section class="content-block">
+      <section class="content-block" id="faq">
         <h2>常见问题</h2>
         <div class="faq-grid">
           <article><h3>简单上线也需要回滚吗？</h3><p>只要影响真实用户，建议至少准备最小回滚路径。</p></article><article><h3>回滚会不会太保守？</h3><p>不是保守，而是降低试错成本。</p></article>
         </div>
       </section>
+      <section class="content-block">
+        <h2>你也可以继续看看这些页面</h2>
+        <div class="related-grid">
+          <article class="related-card">
+  <p class="offer-audience">首次部署或新项目上线团队</p>
+  <h3>VPS 上线检查页</h3>
+  <p>适合上线前确认系统、端口、备份、告警和访问域名的业务团队。</p>
+  <a class="text-link" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/vps-launch-checklist/">查看详情</a>
+</article><article class="related-card">
+  <p class="offer-audience">需要长期维护站点的团队</p>
+  <h3>备份与监控检查页</h3>
+  <p>适合官网、商城、下载站和接口服务在上线前确认备份与告警策略。</p>
+  <a class="text-link" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/backup-monitoring-checklist/">查看详情</a>
+</article>
+        </div>
+      </section>
     </section>
     <aside class="offer-sidebar">
       <div class="sidebar-card">
-        <h2>适合对象</h2>
+        <h2>先看结论</h2>
         <p>适合需要在发布时间窗口内做好失败回退准备的团队。</p>
       </div>
       <div class="sidebar-card">
-        <h2>重点收益</h2>
+        <h2>这页重点关注</h2>
         <ul class="signal-list">
-          <li>适合高风险上线</li><li>强调回滚意识</li><li>利于承接迁移和上线场景</li>
+          <li>适合高风险上线</li><li>强调回滚意识</li><li>方便继续看迁移与上线安排</li>
         </ul>
       </div>
       <div class="sidebar-card">
-        <a class="button" href="https://www.1bgp.com/">查看 1bgp 部署方案</a>
+        <h2>下一步</h2>
+        <p>如果这页内容和你的情况接近，可以继续查看参考方案；如果还在比较，也可以回首页继续看其他页面。</p>
+        <div class="sidebar-actions">
+          <a class="button" href="https://www.1bgp.com/">前往 1bgp 查看参考方案</a>
+          <a class="text-link" href="https://fyrghdyrgh-dot.github.io/fy-deployment-checklist/">返回首页继续比较</a>
+        </div>
       </div>
     </aside>
   </main>

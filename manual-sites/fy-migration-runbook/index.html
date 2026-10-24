@@ -6,24 +6,33 @@
   <title>fy 迁移切换方案</title>
   <meta name="description" content="面向主机迁移、数据库切换和站点回滚准备的迁移专题站，帮助你先把切换步骤和风险想清楚。">
   <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="fy 迁移切换方案">
   <meta property="og:title" content="fy 迁移切换方案">
   <meta property="og:description" content="面向主机迁移、数据库切换和站点回滚准备的迁移专题站，帮助你先把切换步骤和风险想清楚。">
   <meta property="og:url" content="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:title" content="fy 迁移切换方案">
+  <meta name="twitter:description" content="面向主机迁移、数据库切换和站点回滚准备的迁移专题站，帮助你先把切换步骤和风险想清楚。">
   <link rel="canonical" href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/">
   <link rel="stylesheet" href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/assets/lead.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"fy 迁移切换方案","url":"https://fyrghdyrgh-dot.github.io/fy-migration-runbook/","description":"面向主机迁移、数据库切换和站点回滚准备的迁移专题站，帮助你先把切换步骤和风险想清楚。","hasPart":[{"@type":"WebPage","name":"站点迁移方案页","url":"https://fyrghdyrgh-dot.github.io/fy-migration-runbook/site-migration-plan/"},{"@type":"WebPage","name":"数据库切换判断页","url":"https://fyrghdyrgh-dot.github.io/fy-migration-runbook/database-cutover-guide/"},{"@type":"WebPage","name":"跨机房迁移专题页","url":"https://fyrghdyrgh-dot.github.io/fy-migration-runbook/cross-idc-move/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"fy 迁移切换方案","url":"https://fyrghdyrgh-dot.github.io/fy-migration-runbook/","description":"面向主机迁移、数据库切换和站点回滚准备的迁移专题站，帮助你先把切换步骤和风险想清楚。","inLanguage":"zh-CN","dateModified":"2026-10-24T05:45:06.040Z","hasPart":[{"@type":"WebPage","name":"站点迁移指南","url":"https://fyrghdyrgh-dot.github.io/fy-migration-runbook/site-migration-plan/"},{"@type":"WebPage","name":"数据库切换判断页","url":"https://fyrghdyrgh-dot.github.io/fy-migration-runbook/database-cutover-guide/"},{"@type":"WebPage","name":"跨机房迁移专题","url":"https://fyrghdyrgh-dot.github.io/fy-migration-runbook/cross-idc-move/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","url":"https://fyrghdyrgh-dot.github.io/fy-migration-runbook/","mainEntity":[{"@type":"Question","name":"为什么迁移前要先做准备页？","acceptedAnswer":{"@type":"Answer","text":"因为迁移最怕临时决策，提前把关键步骤列清楚，执行时会更稳。"}},{"@type":"Question","name":"迁移是不是只要复制过去就行？","acceptedAnswer":{"@type":"Answer","text":"不是，切换窗口、验证顺序和回滚准备同样重要。"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"fy 迁移切换方案","item":"https://fyrghdyrgh-dot.github.io/fy-migration-runbook/"}]}</script>
 </head>
 <body>
   <header class="topbar">
     <div class="shell topbar-row">
-      <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/">fy migration runbook</a>
+      <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/">fy 迁移切换方案</a>
       <nav>
-        <a href="#offers">方案页</a>
-        <a href="#method">筛选方法</a>
+        <a href="#offers">方案总览</a>
+        <a href="#method">如何判断</a>
         <a href="#faq">常见问题</a>
       </nav>
-      <a class="button ghost" href="#offers">查看迁移方案</a>
+      <a class="button ghost" href="#offers">查看可选方案</a>
     </div>
   </header>
   <main>
@@ -33,12 +42,12 @@
         <h1>迁移不是一次复制，而是一套切换和回退方案。</h1>
         <p class="hero-text">不管是换机房、换主机还是切数据库，先把切换窗口、验证步骤和回滚准备想清楚，迁移过程会稳很多。</p>
         <div class="button-row">
-          <a class="button" href="#offers">查看迁移方案</a>
-          <a class="button ghost" href="https://www.1bgp.com/">前往 1bgp</a>
+          <a class="button" href="#offers">查看可选方案</a>
+          <a class="button ghost" href="https://www.1bgp.com/">获取参考资源</a>
         </div>
       </div>
       <aside class="hero-panel">
-        <h2>挑选逻辑</h2>
+        <h2>选择建议</h2>
         <ul>
           <li>先盘点现状。</li><li>再规划切换窗口。</li><li>最后准备回滚和验证。</li>
         </ul>
@@ -55,14 +64,14 @@
       <div class="offer-grid">
         <article class="offer-card">
     <p class="offer-audience">官网、博客和内容站团队</p>
-    <h3>站点迁移方案页</h3>
+    <h3>站点迁移指南</h3>
     <p class="offer-summary">适合已有线上站点，需要迁移到新主机或新机房的团队。</p>
     <ul class="signal-list">
       <li>已有线上站点</li><li>准备更换服务器或机房</li><li>需要降低迁移风险</li>
     </ul>
     <div class="button-row compact">
-      <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/site-migration-plan/">查看方案</a>
-      <a class="text-link" href="https://www.1bgp.com/">查看 1bgp 迁移资源</a>
+      <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/site-migration-plan/">查看详情</a>
+      <a class="text-link" href="https://www.1bgp.com/">获取参考方案</a>
     </div>
   </article><article class="offer-card">
     <p class="offer-audience">有持续写入业务的团队</p>
@@ -72,19 +81,19 @@
       <li>业务持续有写入</li><li>担心数据丢失</li><li>需要明确切换窗口和验证顺序</li>
     </ul>
     <div class="button-row compact">
-      <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/database-cutover-guide/">查看方案</a>
-      <a class="text-link" href="https://www.1bgp.com/">查看 1bgp 切换方案</a>
+      <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/database-cutover-guide/">查看详情</a>
+      <a class="text-link" href="https://www.1bgp.com/">获取参考方案</a>
     </div>
   </article><article class="offer-card">
     <p class="offer-audience">准备换区域或换服务商的团队</p>
-    <h3>跨机房迁移专题页</h3>
+    <h3>跨机房迁移专题</h3>
     <p class="offer-summary">适合从旧机房迁往新机房、同时要重新评估线路和访问质量的场景。</p>
     <ul class="signal-list">
       <li>准备换服务商或机房</li><li>希望改善访问质量</li><li>需要同步调整线路策略</li>
     </ul>
     <div class="button-row compact">
-      <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/cross-idc-move/">查看方案</a>
-      <a class="text-link" href="https://www.1bgp.com/">查看 1bgp 迁移方案</a>
+      <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-migration-runbook/cross-idc-move/">查看详情</a>
+      <a class="text-link" href="https://www.1bgp.com/">获取参考方案</a>
     </div>
   </article>
       </div>
