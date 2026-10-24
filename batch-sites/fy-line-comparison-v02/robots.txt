@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://fyrghdyrgh-dot.github.io/fy-line-comparison-v02/sitemap.xml

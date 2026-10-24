@@ -1,34 +1,45 @@
 export default {
   site: {
     title: "fy 服务器方案选择",
-    description: "围绕香港服务器、CN2 线路、Windows VPS 和建站场景拆出的引流型方案站，先判断业务需求，再进入合适的线路和方案页。",
+    description: "围绕香港服务器、CN2 线路、Windows VPS 和 WordPress 部署场景整理的选择站，帮助你先看业务条件，再判断更合适的方案。",
     baseUrl: "https://fyrghdyrgh-dot.github.io/fy-server-choice/",
     brand: "fy server choice",
-    eyebrow: "lead family",
+    eyebrow: "server decision guide",
     heroTitle: "不是先看最低价，而是先看业务部署需要什么线路和资源。",
-    heroSubtitle: "把常见业务入口拆成独立方案页，适合从搜索进入后快速判断是否需要香港服务器、CN2、Windows VPS 或 WordPress 专项方案。",
-    primaryCta: { label: "查看全部方案页", href: "#offers" },
+    heroSubtitle: "如果你正在香港服务器、CN2 线路、Windows VPS 或 WordPress 部署方案之间犹豫，可以先按业务条件、系统依赖和访问路径来判断。",
+    primaryCta: { label: "查看全部方案", href: "#offers" },
     secondaryCta: { label: "前往 1bgp", href: "https://www.1bgp.com/" },
+    panelTitle: "怎么选更快",
+    heroBadges: ["香港服务器", "CN2 线路", "Windows VPS", "WordPress"],
+    theme: {
+      bg: "#f6fbff",
+      accent: "#155e75",
+      accent2: "#06b6d4",
+      heroTop: "#072433",
+      heroBottom: "#0e4f66",
+      panelSoft: "#ecfeff",
+      accentSoft: "rgba(6, 182, 212, 0.16)"
+    },
     selectionNotes: [
       "先判断访问人群和地区，再看线路。",
       "先判断业务系统依赖，再选 Linux / Windows。",
       "先看带宽峰值和波动，再看套餐。"
     ],
-    trustPoints: ["按业务入口拆页", "适合搜索流量落地", "CTA 统一导向 1bgp"],
+    trustPoints: ["按常见场景拆分", "先看业务条件再选", "方便继续比较方案"],
     methodSteps: [
       { title: "看业务对象", body: "如果用户主要来自大陆、东南亚或全球，线路和机房优先级完全不同。" },
       { title: "看系统依赖", body: "需要 ASP.NET、SQL Server 或远程桌面时，Windows VPS 的权重更高。" },
       { title: "看内容结构", body: "如果是 WordPress、商城或多站点，稳定性和备份策略比瞬时价格更重要。" }
     ],
     faqs: [
-      { q: "为什么做成多个方案页？", a: "因为引流站的关键是让搜索词和落地页的意图对齐，而不是所有关键词都塞进一个页面。" },
-      { q: "这些页面适合直接转化吗？", a: "适合做判断和筛选，真正下单或进一步咨询可以统一导到主目标站。" }
+      { q: "为什么拆成多个页面？", a: "因为香港服务器、CN2、Windows VPS 和 WordPress 的判断标准并不一样，拆开看会更清楚。" },
+      { q: "这些页面适合直接做选择吗？", a: "适合先做判断和筛选，确认方向后再去比较更具体的方案会更高效。" }
     ]
   },
   offers: [
     {
       slug: "hongkong-business-server",
-      title: "香港服务器方案页",
+      title: "香港服务器选择页",
       audience: "海外业务与跨境访问",
       summary: "适合面向大陆和东南亚混合流量的业务，优先关注线路、带宽和网络稳定性。",
       promise: "香港服务器并不是一类固定产品，而是一组围绕延迟、线路和部署便利性做平衡的方案集合。这个页面先帮助判断你是否真的应该选香港节点。",
@@ -97,11 +108,11 @@ export default {
     },
     {
       slug: "wordpress-hosting-brief",
-      title: "WordPress 部署页",
+      title: "WordPress 部署指南",
       audience: "官网、内容站和专题站",
       summary: "适合内容站、企业官网和营销站，需要兼顾加载速度、备份、更新和后续扩展。",
-      promise: "WordPress 方案页更关注运维成本、插件兼容和备份恢复，而不是只看单机配置。适合用来承接建站和托管类搜索意图。",
-      benefits: ["更容易承接建站类搜索", "强调稳定和备份", "适合继续引导到托管方案"],
+      promise: "WordPress 部署更应该关注运维成本、插件兼容和备份恢复，而不只是单机配置。先把这些关键点想清楚，后续维护会轻松很多。",
+      benefits: ["适合内容站和官网", "强调稳定和备份", "方便继续比较托管方案"],
       signals: ["需要持续更新内容", "依赖插件和主题生态", "站点后续会扩到多栏目或多语言"],
       compare: [
         { label: "适配业务", value: "内容站点" },

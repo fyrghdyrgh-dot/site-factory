@@ -1,27 +1,38 @@
 export default {
   site: {
     title: "fy SaaS 方案比较",
-    description: "围绕客服工单、知识库、表单系统和分析平台拆分的 SaaS 对比与引导站，适合承接选型和方案比较类搜索。",
+    description: "围绕客服工单、知识库、表单系统和分析平台整理的 SaaS 对比站，帮助团队先看流程和协作方式，再判断该选哪类工具。",
     baseUrl: "https://fyrghdyrgh-dot.github.io/fy-saas-compare/",
     brand: "fy saas compare",
-    eyebrow: "lead family",
+    eyebrow: "saas comparison guide",
     heroTitle: "先明确团队规模和流程，再看 SaaS 价格页和功能页。",
-    heroSubtitle: "这是一组围绕选型意图设计的方案页，不追求收集所有产品，而是优先把适合什么团队、什么阶段说清楚。",
+    heroSubtitle: "如果你在客服工单、知识库、表单系统和分析平台之间做选型，先看团队规模、协作方式和迁移成本，会比直接看价格页更快。",
     primaryCta: { label: "查看对比方案", href: "#offers" },
     secondaryCta: { label: "查看选型方法", href: "#method" },
+    panelTitle: "选型先看",
+    heroBadges: ["工单系统", "知识库", "表单流程", "分析平台"],
+    theme: {
+      bg: "#fbf7ff",
+      accent: "#6d28d9",
+      accent2: "#8b5cf6",
+      heroTop: "#1f1147",
+      heroBottom: "#3d2374",
+      panelSoft: "#f5f3ff",
+      accentSoft: "rgba(139, 92, 246, 0.16)"
+    },
     selectionNotes: [
       "先看团队协作流程，再看功能多不多。",
       "先看落地成本，再看大而全的套件。",
       "先确认需要替代什么，再谈迁移。"
     ],
-    trustPoints: ["按场景拆页", "强调团队规模", "适合选型意图落地"],
+    trustPoints: ["按实际流程拆分", "强调团队规模差异", "方便继续比较方案"],
     methodSteps: [
       { title: "定义主流程", body: "比如工单、知识库、表单或分析，先把主流程卡住，避免功能太多反而难落地。" },
       { title: "看协作人数", body: "5 人团队和 50 人团队对权限、审批和流程编排的需求完全不同。" },
       { title: "看迁移成本", body: "如果旧系统数据复杂，迁移和培训成本可能比订阅费更重要。" }
     ],
     faqs: [
-      { q: "为什么不做成纯产品目录？", a: "因为 lead family 更适合承接高意图流量，强调判断和选择，而不是把几十个工具堆在一起。" },
+      { q: "为什么不做成纯产品目录？", a: "因为先看判断标准会更实用，尤其是团队在流程、协作和迁移成本上差异很大时。" },
       { q: "可以继续扩到价格页吗？", a: "可以，后续可以在每个方案页下再挂价格层、迁移层和适合人群层。" }
     ]
   },

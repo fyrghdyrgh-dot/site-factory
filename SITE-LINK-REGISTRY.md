@@ -28,6 +28,17 @@
 | 14 | AI 导航速查 | 02 | `fy-nav-search-hub-v02` | https://fyrghdyrgh-dot.github.io/fy-nav-search-hub-v02/ | 搜索导航型模板站第二版 |
 | 15 | AI 分类目录 | 02 | `fy-nav-category-directory-v02` | https://fyrghdyrgh-dot.github.io/fy-nav-category-directory-v02/ | 分类目录型模板站第二版 |
 | 16 | AI 工具风向标 | 02 | `fy-nav-media-portal-v02` | https://fyrghdyrgh-dot.github.io/fy-nav-media-portal-v02/ | 媒体门户型模板站第二版 |
+| 17 | 业务场景站 | 02 | `fy-business-scenario-v02` | https://fyrghdyrgh-dot.github.io/fy-business-scenario-v02/ | lead 站第二版 |
+| 18 | 香港节点推荐站 | 02 | `fy-hk-server-selector-v02` | https://fyrghdyrgh-dot.github.io/fy-hk-server-selector-v02/ | lead 站第二版 |
+| 19 | 线路对比站 | 02 | `fy-line-comparison-v02` | https://fyrghdyrgh-dot.github.io/fy-line-comparison-v02/ | lead 站第二版 |
+| 20 | 部署清单专题 | 02 | `fy-deployment-checklist-v02` | https://fyrghdyrgh-dot.github.io/fy-deployment-checklist-v02/ | lead 站第二版 |
+| 21 | 迁移切换方案 | 02 | `fy-migration-runbook-v02` | https://fyrghdyrgh-dot.github.io/fy-migration-runbook-v02/ | lead 站第二版 |
+| 22 | 起步配置组合 | 02 | `fy-startup-stack-v02` | https://fyrghdyrgh-dot.github.io/fy-startup-stack-v02/ | lead 站第二版 |
+| 23 | 托管与自管比较 | 02 | `fy-managed-hosting-v02` | https://fyrghdyrgh-dot.github.io/fy-managed-hosting-v02/ | lead 站第二版 |
+| 24 | 预算配置规划 | 02 | `fy-cost-estimator-v02` | https://fyrghdyrgh-dot.github.io/fy-cost-estimator-v02/ | lead 站第二版 |
+| 25 | 系统适配专题 | 02 | `fy-system-compatibility-v02` | https://fyrghdyrgh-dot.github.io/fy-system-compatibility-v02/ | lead 站第二版 |
+| 26 | 服务器 FAQ 专题 | 02 | `fy-ops-faq-v02` | https://fyrghdyrgh-dot.github.io/fy-ops-faq-v02/ | lead 站第二版 |
+| 27 | 服务器方案选择 | 01 | `fy-server-choice` | https://fyrghdyrgh-dot.github.io/fy-server-choice/ | lead 站首版 |
 
 ## 既有已知站点
 
@@ -39,6 +50,11 @@
 | VPS 上线清单 | https://github.com/fyrghdyrgh-dot/vps-launch-checklist | https://fyrghdyrgh-dot.github.io/vps-launch-checklist/ | 旧示例站 |
 | 服务器节点建议器 | https://github.com/fyrghdyrgh-dot/server-location-advisor | https://fyrghdyrgh-dot.github.io/server-location-advisor/ | 旧示例站 |
 | 比例计算小工具 | https://github.com/fyrghdyrgh-dot/ratio-kit-mobile | https://fyrghdyrgh-dot.github.io/ratio-kit-mobile/ | 旧工具站 |
+
+## 待补发
+
+- `SaaS 方案比较`：计划仓库 slug 为 `fy-saas-compare`
+- 当前状态：本地产物已生成，发布时被 GitHub 的“短时间创建仓库过多”限流拦截，待下一轮重试
 
 ## 维护说明
 
