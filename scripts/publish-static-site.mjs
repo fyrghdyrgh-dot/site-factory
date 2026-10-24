@@ -1,4 +1,4 @@
-import { mkdtempSync } from "node:fs";
+import { mkdtempSync, writeFileSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 
@@ -15,6 +15,7 @@ export function publishStaticSite({ owner, repo, sourceDir }) {
   run("git", ["clone", repoUrl(owner, repo), cloneDir], tempRoot);
   clearCloneDir(cloneDir);
   run("bash", ["-lc", `cp -R "${sourceDir}/." "${cloneDir}/"`], tempRoot);
+  writeFileSync(path.join(cloneDir, ".nojekyll"), "", "utf8");
   run("git", ["checkout", "-B", "main"], cloneDir);
   run("git", ["config", "user.name", "TRAE Bot"], cloneDir);
   run("git", ["config", "user.email", "bot@trae.ai"], cloneDir);
@@ -31,7 +32,7 @@ export function publishStaticSite({ owner, repo, sourceDir }) {
   return {
     repo: `${owner}/${repo}`,
     repo_url: `https://github.com/${owner}/${repo}`,
-    site_url: `https://${owner}.github.io/${repo}/`
+    site_url: repo === `${owner}.github.io` ? `https://${owner}.github.io/` : `https://${owner}.github.io/${repo}/`
   };
 }
 

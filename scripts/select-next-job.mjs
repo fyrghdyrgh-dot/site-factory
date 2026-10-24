@@ -37,13 +37,14 @@ export function selectNextJob() {
       const family = usableFamilies.find((item) => item.id === familyId);
       if (!family) continue;
 
-      if (topic.preset_file && family.id === "family-nav") {
+      if (topic.preset_file && family.template_dir && family.generator) {
         return {
           topic,
           family,
           repo_name: topic.repo_slug,
           site_title: topic.site_title,
-          preset_file: path.join(projectRoot, topic.preset_file)
+          preset_file: path.join(projectRoot, topic.preset_file),
+          generator_path: path.join(projectRoot, family.template_dir, family.generator)
         };
       }
     }

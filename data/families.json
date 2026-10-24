@@ -4,7 +4,8 @@
       "id": "family-nav",
       "label": "导航站",
       "enabled": true,
-      "generator": "build-root-site.mjs",
+      "generator": "build-site.mjs",
+      "template_dir": "templates/family-nav",
       "source_repo": "fyrghdyrgh-dot/github.io",
       "layout_signatures": [
         "left-sidebar-card-grid",
@@ -18,9 +19,10 @@
     {
       "id": "family-tool",
       "label": "工具站",
-      "enabled": false,
+      "enabled": true,
       "generator": "build-tool-site.mjs",
-      "source_repo": "future/site-factory",
+      "template_dir": "templates/family-tool",
+      "source_repo": "fyrghdyrgh-dot/site-factory",
       "layout_signatures": [
         "tool-home",
         "single-tool-focus",
@@ -33,9 +35,10 @@
     {
       "id": "family-lead",
       "label": "引流站",
-      "enabled": false,
+      "enabled": true,
       "generator": "build-lead-site.mjs",
-      "source_repo": "future/site-factory",
+      "template_dir": "templates/family-lead",
+      "source_repo": "fyrghdyrgh-dot/site-factory",
       "layout_signatures": [
         "topic-landing",
         "compare-page",
@@ -48,9 +51,10 @@
     {
       "id": "family-analysis",
       "label": "技术分析站",
-      "enabled": false,
+      "enabled": true,
       "generator": "build-analysis-site.mjs",
-      "source_repo": "future/site-factory",
+      "template_dir": "templates/family-analysis",
+      "source_repo": "fyrghdyrgh-dot/site-factory",
       "layout_signatures": [
         "editorial-longform",
         "briefing-layout",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T00:59:15.518Z",
+  "generated_at": "2026-10-24T01:33:52.857Z",
   "sites": [
     {
       "site_id": "fybot-root-home",
@@ -46,23 +46,67 @@
         "WordPress VPS"
       ],
       "server_target_used": true
+    },
+    {
+      "site_id": "fy-server-choice-1792805279383",
+      "title": "fy 服务器方案选择",
+      "family": "family-lead",
+      "topic_id": "server-plan-leads",
+      "repo": "fyrghdyrgh-dot/fy-server-choice",
+      "url": "https://fyrghdyrgh-dot.github.io/fy-server-choice/",
+      "published_at": "2026-10-24T01:27:59.381Z",
+      "keywords": [
+        "香港云服务器",
+        "CN2 线路",
+        "业务部署方案",
+        "带宽和线路选择"
+      ],
+      "server_target_used": true
+    },
+    {
+      "site_id": "fy-performance-brief-1792805632858",
+      "title": "fy 性能分析简报",
+      "family": "family-analysis",
+      "topic_id": "performance-analysis-brief",
+      "repo": "fyrghdyrgh-dot/fy-performance-brief",
+      "url": "https://fyrghdyrgh-dot.github.io/fy-performance-brief/",
+      "published_at": "2026-10-24T01:33:52.857Z",
+      "verification_status": "published_verified",
+      "verified_urls": [
+        "https://fyrghdyrgh-dot.github.io/fy-performance-brief/",
+        "https://fyrghdyrgh-dot.github.io/fy-performance-brief/api-tail-latency-note/"
+      ],
+      "verification_checked_at": "2026-10-24T01:34:47.000Z",
+      "keywords": [
+        "LCP",
+        "接口延迟",
+        "错误预算",
+        "灰度发布"
+      ],
+      "server_target_used": false
     }
   ],
   "recent_usage": {
     "families": [
       "family-nav",
       "family-nav",
-      "family-nav"
+      "family-nav",
+      "family-lead",
+      "family-analysis"
     ],
     "topics": [
       "ai-tool-roundup",
       "global-ops-tools",
-      "server-choice-brief"
+      "server-choice-brief",
+      "server-plan-leads",
+      "performance-analysis-brief"
     ],
     "repo_names": [
       "fyrghdyrgh-dot.github.io",
       "fy-global-tools",
-      "fy-server-brief"
+      "fy-server-brief",
+      "fy-server-choice",
+      "fy-performance-brief"
     ]
   }
 }
