@@ -48,6 +48,7 @@
 | 34 | 香港节点推荐站 | 03 | `fy-hk-server-selector-v03` | https://fyrghdyrgh-dot.github.io/fy-hk-server-selector-v03/ | lead 站第三版 |
 | 35 | 线路对比站 | 03 | `fy-line-comparison-v03` | https://fyrghdyrgh-dot.github.io/fy-line-comparison-v03/ | lead 站第三版 |
 | 36 | SaaS 方案比较 | 01 | `fy-saas-compare` | https://fyrghdyrgh-dot.github.io/fy-saas-compare/ | lead 站首版 |
+| 37 | 出海工具导航 | 02 | `fy-global-tools-v02` | https://fyrghdyrgh-dot.github.io/fy-global-tools-v02/ | 导航站第二版 |
 
 ## 既有已知站点
 
@@ -62,7 +63,18 @@
 
 ## 待补发
 
-- 当前无
+- `开发工具导航`：计划仓库 slug 为 `fy-dev-tools-v02`
+- `服务器专题导航`：计划仓库 slug 为 `fy-server-brief-v02`
+- `数据清洗工具站`：计划仓库 slug 为 `fy-data-clean-lab-v02`
+- `开发排查工具站`：计划仓库 slug 为 `fy-dev-debug-lab-v02`
+- `内容运营工具站`：计划仓库 slug 为 `fy-content-ops-lab-v02`
+- `本地化工具站`：计划仓库 slug 为 `fy-localization-toolkit-v02`
+- `部署清单专题`：计划仓库 slug 为 `fy-deployment-checklist-v03`
+- `迁移切换方案`：计划仓库 slug 为 `fy-migration-runbook-v03`
+- `起步配置组合`：计划仓库 slug 为 `fy-startup-stack-v03`
+- `托管与自管比较`：计划仓库 slug 为 `fy-managed-hosting-v03`
+- `SaaS 方案比较`：计划仓库 slug 为 `fy-saas-compare-v02`
+- 当前状态：本地站点均已生成，但发布时被 GitHub 的“短时间创建仓库过多”限流拦截，待下一轮重试
 
 ## 维护说明
 

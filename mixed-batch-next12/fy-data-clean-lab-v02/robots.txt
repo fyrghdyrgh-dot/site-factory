@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/sitemap.xml

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fy 数据清洗工具站</title>
+  <meta name="description" content="围绕 CSV 清洗、文本去重、字段映射和 Markdown 表格整理的轻量工具站，适合运营、产品、数据和内容团队快速处理原始数据。">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="fy 数据清洗工具站">
+  <meta property="og:description" content="围绕 CSV 清洗、文本去重、字段映射和 Markdown 表格整理的轻量工具站，适合运营、产品、数据和内容团队快速处理原始数据。">
+  <meta property="og:url" content="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/">
+  <link rel="stylesheet" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/assets/tool.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"fy 数据清洗工具站","url":"https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/","description":"围绕 CSV 清洗、文本去重、字段映射和 Markdown 表格整理的轻量工具站，适合运营、产品、数据和内容团队快速处理原始数据。","hasPart":[{"@type":"SoftwareApplication","name":"CSV 列名标准化","url":"https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/csv-column-normalizer/","applicationCategory":"表格整理"},{"@type":"SoftwareApplication","name":"Markdown 表格整理器","url":"https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/markdown-table-cleaner/","applicationCategory":"表格整理"},{"@type":"SoftwareApplication","name":"文本去重检查清单","url":"https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/text-dedup-checklist/","applicationCategory":"文本处理"},{"@type":"SoftwareApplication","name":"字段映射模板","url":"https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/column-mapping-template/","applicationCategory":"映射校验"},{"@type":"SoftwareApplication","name":"导入模板预检查","url":"https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/import-template-precheck/","applicationCategory":"映射校验"}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/">fy data clean lab</a>
+      <div class="header-actions">
+        <a href="#toolDirectory">工具目录</a>
+        <a href="#faq">常见问题</a>
+        <a class="button ghost" href="#toolDirectory">查看全部工具</a>
+      </div>
+    </div>
+    <div class="shell hero-grid">
+      <div>
+        <p class="eyebrow">tool family</p>
+        <h1>把零散数据先处理干净，再进入分析和交付。</h1>
+        <p class="hero-text">这不是导航站，而是围绕数据整理场景组织的工具型页面：先看输入和输出，再看步骤、限制和 FAQ。</p>
+        <div class="hero-cta">
+          <a class="button" href="#toolDirectory">查看全部工具</a>
+          <a class="button ghost" href="#faq">整理工作清单</a>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <p>适合处理运营导出的 CSV、客服文本、投放报表、渠道字段和 Markdown 表格。每个页面都尽量写清楚什么情况下该用、结果能拿去做什么。</p>
+        <div class="hero-search">
+          <input id="toolSearch" type="search" placeholder="搜索工具名、场景或标签，例如：CSV、去重、字段映射、Markdown 表格">
+        </div>
+        <div class="chip-row"><button class="chip" type="button" data-filter="sheet-clean">表格整理</button><button class="chip" type="button" data-filter="text-normalize">文本处理</button><button class="chip" type="button" data-filter="mapping-check">映射校验</button></div>
+      </aside>
+    </div>
+  </header>
+  <main class="shell main-stack" id="toolDirectory">
+    <section class="stats-row">
+      <article>
+        <strong>5</strong>
+        <span>个实用工具页</span>
+      </article>
+      <article>
+        <strong>3</strong>
+        <span>个场景分类</span>
+      </article>
+      <article>
+        <strong>2026-10</strong>
+        <span>最近更新</span>
+      </article>
+    </section>
+    <section class="category-shell" data-group="sheet-clean" data-keywords="表格整理 先处理行列、空值、字段顺序，再进入统计或导入。 CSV 列名标准化 处理渠道报表、活动导出和 CRM 列名不一致的问题，先把原始字段统一，再进入后续汇总或导入。 CSV 列名规范 导入前检查 Markdown 表格整理器 适合把飞书、Notion、Excel 导出的内容整理成可直接贴到 Markdown 文档里的表格结构。 Markdown 知识库 文档整理">
+      <div class="section-head">
+        <p class="eyebrow">表格整理</p>
+        <h2>先处理行列、空值、字段顺序，再进入统计或导入。</h2>
+      </div>
+      <div class="tool-grid">
+        <article class="tool-card" data-card data-keywords="CSV 列名标准化 统一列名、顺序和空值标记 处理渠道报表、活动导出和 CRM 列名不一致的问题，先把原始字段统一，再进入后续汇总或导入。 CSV 列名规范 导入前检查 渠道投放报表汇总 多店铺订单导出合并 CRM 导入前预处理">
+      <div class="tool-head">
+        <div class="tool-icon">C</div>
+        <div>
+          <h3>CSV 列名标准化</h3>
+          <p class="tagline">统一列名、顺序和空值标记</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span>CSV</span><span>列名规范</span><span>导入前检查</span>
+      </div>
+      <p class="tool-summary">处理渠道报表、活动导出和 CRM 列名不一致的问题，先把原始字段统一，再进入后续汇总或导入。</p>
+      <p class="tool-meta">表格整理 · 统一列名的 CSV / 字段映射记录</p>
+      <div class="card-actions">
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/csv-column-normalizer/">进入工具页</a>
+        <a class="text-link" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab/" target="_blank" rel="noreferrer">直达链接</a>
+      </div>
+    </article><article class="tool-card" data-card data-keywords="Markdown 表格整理器 把文档中的表格先修平再发布 适合把飞书、Notion、Excel 导出的内容整理成可直接贴到 Markdown 文档里的表格结构。 Markdown 知识库 文档整理 产品文档发布前 技术博客排版 知识库迁移">
+      <div class="tool-head">
+        <div class="tool-icon">M</div>
+        <div>
+          <h3>Markdown 表格整理器</h3>
+          <p class="tagline">把文档中的表格先修平再发布</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span>Markdown</span><span>知识库</span><span>文档整理</span>
+      </div>
+      <p class="tool-summary">适合把飞书、Notion、Excel 导出的内容整理成可直接贴到 Markdown 文档里的表格结构。</p>
+      <p class="tool-meta">表格整理 · 干净的 Markdown 表格 / 表头规范</p>
+      <div class="card-actions">
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/markdown-table-cleaner/">进入工具页</a>
+        <a class="text-link" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab/" target="_blank" rel="noreferrer">直达链接</a>
+      </div>
+    </article>
+      </div>
+    </section>
+<section class="category-shell" data-group="text-normalize" data-keywords="文本处理 适合客服、运营和内容团队整理文本、标题和说明字段。 文本去重检查清单 适合清洗标题库、客服快捷回复、活动说明和商品卖点，避免重复文本在导入和发布时污染结果。 文本去重 客服话术 标题整理">
+      <div class="section-head">
+        <p class="eyebrow">文本处理</p>
+        <h2>适合客服、运营和内容团队整理文本、标题和说明字段。</h2>
+      </div>
+      <div class="tool-grid">
+        <article class="tool-card" data-card data-keywords="文本去重检查清单 先去重，再做标题和文案整理 适合清洗标题库、客服快捷回复、活动说明和商品卖点，避免重复文本在导入和发布时污染结果。 文本去重 客服话术 标题整理 商品标题库整理 FAQ 文本去重 客服常用回复合并">
+      <div class="tool-head">
+        <div class="tool-icon">文</div>
+        <div>
+          <h3>文本去重检查清单</h3>
+          <p class="tagline">先去重，再做标题和文案整理</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span>文本去重</span><span>客服话术</span><span>标题整理</span>
+      </div>
+      <p class="tool-summary">适合清洗标题库、客服快捷回复、活动说明和商品卖点，避免重复文本在导入和发布时污染结果。</p>
+      <p class="tool-meta">文本处理 · 去重文本库 / 去重规则说明</p>
+      <div class="card-actions">
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/text-dedup-checklist/">进入工具页</a>
+        <a class="text-link" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab/" target="_blank" rel="noreferrer">直达链接</a>
+      </div>
+    </article>
+      </div>
+    </section>
+<section class="category-shell" data-group="mapping-check" data-keywords="映射校验 围绕字段映射、导入模板和结构一致性做预检查。 字段映射模板 适合多系统对接、报表迁移和表单导入，把字段来源、目标名、类型和必填规则明确写在一起。 字段映射 导入模板 结构化数据 导入模板预检查 适合在 CRM、ERP、表单系统或广告平台导入前检查模板列数、必填项、枚举值和编码格式。 模板预检 导入校验 枚举值">
+      <div class="section-head">
+        <p class="eyebrow">映射校验</p>
+        <h2>围绕字段映射、导入模板和结构一致性做预检查。</h2>
+      </div>
+      <div class="tool-grid">
+        <article class="tool-card" data-card data-keywords="字段映射模板 把来源字段和目标字段先对齐 适合多系统对接、报表迁移和表单导入，把字段来源、目标名、类型和必填规则明确写在一起。 字段映射 导入模板 结构化数据 CRM 迁移 表单字段对接 内部系统导入模板">
+      <div class="tool-head">
+        <div class="tool-icon">字</div>
+        <div>
+          <h3>字段映射模板</h3>
+          <p class="tagline">把来源字段和目标字段先对齐</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span>字段映射</span><span>导入模板</span><span>结构化数据</span>
+      </div>
+      <p class="tool-summary">适合多系统对接、报表迁移和表单导入，把字段来源、目标名、类型和必填规则明确写在一起。</p>
+      <p class="tool-meta">映射校验 · 字段映射表 / 导入前校验结果</p>
+      <div class="card-actions">
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/column-mapping-template/">进入工具页</a>
+        <a class="text-link" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab/" target="_blank" rel="noreferrer">直达链接</a>
+      </div>
+    </article><article class="tool-card" data-card data-keywords="导入模板预检查 导入前最后一轮结构确认 适合在 CRM、ERP、表单系统或广告平台导入前检查模板列数、必填项、枚举值和编码格式。 模板预检 导入校验 枚举值 广告平台素材导入 线索表单导入 ERP 商品批量导入">
+      <div class="tool-head">
+        <div class="tool-icon">导</div>
+        <div>
+          <h3>导入模板预检查</h3>
+          <p class="tagline">导入前最后一轮结构确认</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span>模板预检</span><span>导入校验</span><span>枚举值</span>
+      </div>
+      <p class="tool-summary">适合在 CRM、ERP、表单系统或广告平台导入前检查模板列数、必填项、枚举值和编码格式。</p>
+      <p class="tool-meta">映射校验 · 预检查清单 / 问题项列表</p>
+      <div class="card-actions">
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/import-template-precheck/">进入工具页</a>
+        <a class="text-link" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab/" target="_blank" rel="noreferrer">直达链接</a>
+      </div>
+    </article>
+      </div>
+    </section>
+    <section class="faq-shell" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>工具站使用说明</h2>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-card"><h3>这套站更适合谁？</h3><p>更适合有明确输入和输出的场景，例如运营表格清洗、数据导入前校验、文本批量处理，而不是单纯浏览链接。</p></article><article class="faq-card"><h3>为什么每页都写输入和输出？</h3><p>因为工具站的关键不是介绍多全，而是让访客快速判断自己当前手头的数据能不能直接处理。</p></article><article class="faq-card"><h3>后续还能扩什么？</h3><p>可以继续加更多输入输出明确的小工具，例如时区换算、金额格式标准化、标题去重和导入模板检查。</p></article>
+      </div>
+    </section>
+  </main>
+  <script src="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab-v02/assets/tool.js"></script>
+</body>
+</html>

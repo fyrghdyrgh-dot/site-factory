@@ -1,0 +1,115 @@
+[
+  {
+    "type": "home",
+    "title": "fy 服务器专题导航",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/"
+  },
+  {
+    "type": "category",
+    "title": "网络与开发工具",
+    "category": "net-tools",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/net-tools/"
+  },
+  {
+    "type": "category",
+    "title": "服务器与 IDC",
+    "category": "server-idc",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/server-idc/"
+  },
+  {
+    "type": "category",
+    "title": "知识与文档",
+    "category": "knowledge-docs",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/knowledge-docs/"
+  },
+  {
+    "type": "tool",
+    "title": "IPv4 与 CIDR 常用工具",
+    "category": "net-tools",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/ipv4-subnet-toolkit/"
+  },
+  {
+    "type": "guide",
+    "title": "API 联调检查清单",
+    "category": "net-tools",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/api-debug-checklist/"
+  },
+  {
+    "type": "service",
+    "title": "香港服务器租用与业务匹配",
+    "category": "server-idc",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/hongkong-server/"
+  },
+  {
+    "type": "service",
+    "title": "CN2 线路服务器怎么选",
+    "category": "server-idc",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/cn2-server/"
+  },
+  {
+    "type": "service",
+    "title": "Windows VPS 购买前要看什么",
+    "category": "server-idc",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/windows-vps/"
+  },
+  {
+    "type": "service",
+    "title": "WordPress VPS 不一定要高配",
+    "category": "server-idc",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/wordpress-vps/"
+  },
+  {
+    "type": "guide",
+    "title": "新手第一次买 VPS 的判断顺序",
+    "category": "server-idc",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/starter-vps-guide/"
+  },
+  {
+    "type": "article",
+    "title": "知识文档结构模板怎么搭",
+    "category": "knowledge-docs",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/docs-structure-template/"
+  },
+  {
+    "type": "article",
+    "title": "产品规格文档应该怎么写更好协作",
+    "category": "knowledge-docs",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/product-spec-workflow/"
+  },
+  {
+    "type": "tool",
+    "title": "域名解析与 HTTP 状态检查",
+    "category": "net-tools",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/dns-http-status-check/"
+  },
+  {
+    "type": "guide",
+    "title": "curl 请求排查顺序",
+    "category": "net-tools",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/curl-request-builder/"
+  },
+  {
+    "type": "guide",
+    "title": "Webhook 调试记录怎么留",
+    "category": "net-tools",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/webhook-debug-notes/"
+  },
+  {
+    "type": "article",
+    "title": "运维 Runbook 模板怎么写",
+    "category": "knowledge-docs",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/ops-runbook-template/"
+  },
+  {
+    "type": "guide",
+    "title": "会议纪要模板怎么写更有用",
+    "category": "knowledge-docs",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/meeting-summary-template/"
+  },
+  {
+    "type": "article",
+    "title": "团队 Wiki 目录该怎么规划",
+    "category": "knowledge-docs",
+    "url": "https://fyrghdyrgh-dot.github.io/fy-server-brief-v02/wiki-directory-planning/"
+  }
+]
