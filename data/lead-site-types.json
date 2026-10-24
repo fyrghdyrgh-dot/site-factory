@@ -1,0 +1,112 @@
+{
+  "lead_site_types": [
+    {
+      "id": "server-choice",
+      "label": "服务器方案选择站",
+      "intent": "按地区、线路和业务类型筛选服务器方案",
+      "best_for": ["香港服务器", "CN2 线路", "Windows VPS", "WordPress VPS"],
+      "cta_style": "查看方案后跳转主目标站",
+      "allow_server_target": true,
+      "preset_file": "templates/family-lead/presets/fy-server-choice.config.mjs"
+    },
+    {
+      "id": "saas-compare",
+      "label": "SaaS 选型对比站",
+      "intent": "承接高意图选型词并把方案比较说清楚",
+      "best_for": ["客服工单", "知识库迁移", "表单系统", "分析平台"],
+      "cta_style": "对比阅读后跳转具体方案页",
+      "allow_server_target": false,
+      "preset_file": "templates/family-lead/presets/fy-saas-compare.config.mjs"
+    },
+    {
+      "id": "region-selector",
+      "label": "地区节点推荐站",
+      "intent": "根据访问地区和业务类型推荐合适节点",
+      "best_for": ["香港节点", "新加坡节点", "日本节点", "美国节点"],
+      "cta_style": "根据地区选择后进入目标站",
+      "allow_server_target": true,
+      "preset_file": "templates/family-lead/presets/fy-hk-server-selector.config.mjs"
+    },
+    {
+      "id": "line-comparison",
+      "label": "线路对比引流站",
+      "intent": "承接线路区别、速度判断和稳定性比较类搜索",
+      "best_for": ["CN2 对比", "BGP 线路", "大陆优化线路", "海外回程质量"],
+      "cta_style": "对比完成后进入线路方案页",
+      "allow_server_target": true,
+      "preset_file": "templates/family-lead/presets/fy-line-comparison.config.mjs"
+    },
+    {
+      "id": "deployment-checklist",
+      "label": "部署清单引流站",
+      "intent": "先用步骤和检查项建立信任，再承接部署方案",
+      "best_for": ["VPS 上线", "站点迁移", "监控备份", "回滚流程"],
+      "cta_style": "完成清单后查看部署资源",
+      "allow_server_target": true,
+      "preset_file": "templates/family-lead/presets/fy-deployment-checklist.config.mjs"
+    },
+    {
+      "id": "migration-runbook",
+      "label": "迁移与切换方案站",
+      "intent": "承接迁移前准备、切换窗口和回滚方案类流量",
+      "best_for": ["主机迁移", "站点切换", "数据库迁移", "跨机房迁移"],
+      "cta_style": "先看迁移风险，再进入方案页",
+      "allow_server_target": true,
+      "preset_file": "templates/family-lead/presets/fy-migration-runbook.config.mjs"
+    },
+    {
+      "id": "starter-stack",
+      "label": "起步方案组合站",
+      "intent": "按业务阶段推荐入门配置和最小可用组合",
+      "best_for": ["新站上线", "MVP 部署", "轻量电商", "内容站起步"],
+      "cta_style": "看完组合建议后进入购买页",
+      "allow_server_target": true,
+      "preset_file": "templates/family-lead/presets/fy-startup-stack.config.mjs"
+    },
+    {
+      "id": "managed-hosting",
+      "label": "托管与自管对比站",
+      "intent": "比较托管、半托管和自管方案的实际成本",
+      "best_for": ["托管 WordPress", "运维外包", "自管 VPS", "团队协作运维"],
+      "cta_style": "比较后引导到托管或主机方案",
+      "allow_server_target": true,
+      "preset_file": "templates/family-lead/presets/fy-managed-hosting.config.mjs"
+    },
+    {
+      "id": "scenario-solution",
+      "label": "业务场景解决方案站",
+      "intent": "按业务场景拆页，避免泛泛而谈",
+      "best_for": ["跨境电商", "下载分发", "API 服务", "内容站"],
+      "cta_style": "场景判断后跳转对应资源",
+      "allow_server_target": true,
+      "preset_file": "templates/family-lead/presets/fy-business-scenario.config.mjs"
+    },
+    {
+      "id": "budget-planner",
+      "label": "预算与配置规划站",
+      "intent": "把预算、带宽和资源规划做成高意图引流入口",
+      "best_for": ["带宽预算", "配置预估", "流量峰值", "资源扩容"],
+      "cta_style": "预算评估后查看对应套餐",
+      "allow_server_target": true,
+      "preset_file": "templates/family-lead/presets/fy-cost-estimator.config.mjs"
+    },
+    {
+      "id": "compatibility-match",
+      "label": "系统与组件适配站",
+      "intent": "承接系统选择、兼容性判断和软件栈匹配流量",
+      "best_for": ["Linux vs Windows", ".NET 组件", "数据库依赖", "远程桌面环境"],
+      "cta_style": "适配判断后进入方案页",
+      "allow_server_target": true,
+      "preset_file": "templates/family-lead/presets/fy-system-compatibility.config.mjs"
+    },
+    {
+      "id": "faq-hub",
+      "label": "高意图 FAQ 专题站",
+      "intent": "围绕问题词和疑虑词覆盖长尾流量",
+      "best_for": ["服务器常见问题", "线路误区", "部署疑问", "迁移风险"],
+      "cta_style": "问题解答后进入更深方案页",
+      "allow_server_target": true,
+      "preset_file": "templates/family-lead/presets/fy-ops-faq.config.mjs"
+    }
+  ]
+}
