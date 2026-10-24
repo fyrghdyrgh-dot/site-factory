@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>手动生成站点目录</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #121826;
+      --muted: #5b6475;
+      --border: #d8deea;
+      --accent: #2563eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    .intro {
+      margin: 0 0 24px;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+    .card {
+      padding: 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+    .order {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e8f0ff;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.3;
+    }
+    p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    li + li {
+      margin-top: 6px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>手动生成站点目录</h1>
+    <p class="intro">本次按顺序手动生成 3 个 `family-lead` 站点，每个站点都包含首页、3 个子页面、`robots.txt` 和 `sitemap.xml`。</p>
+    <div class="grid">
+      <section class="card">
+        <span class="order">第 1 个</span>
+        <h2>fy 业务场景方案</h2>
+        <p>按跨境电商、API 服务和下载分发 3 个业务场景拆页。</p>
+        <ul>
+          <li><a href="./fy-business-scenario/index.html">站点首页</a></li>
+          <li><a href="./fy-business-scenario/cross-border-store-hosting/index.html">跨境电商部署页</a></li>
+          <li><a href="./fy-business-scenario/api-service-hosting/index.html">API 服务部署页</a></li>
+          <li><a href="./fy-business-scenario/download-distribution-hosting/index.html">下载分发站部署页</a></li>
+        </ul>
+      </section>
+      <section class="card">
+        <span class="order">第 2 个</span>
+        <h2>fy 地区节点推荐</h2>
+        <p>按香港、新加坡和全球业务起步 3 类节点判断拆页。</p>
+        <ul>
+          <li><a href="./fy-hk-server-selector/index.html">站点首页</a></li>
+          <li><a href="./fy-hk-server-selector/hongkong-node-guide/index.html">香港节点推荐页</a></li>
+          <li><a href="./fy-hk-server-selector/singapore-node-guide/index.html">新加坡节点推荐页</a></li>
+          <li><a href="./fy-hk-server-selector/global-node-guide/index.html">全球业务节点判断页</a></li>
+        </ul>
+      </section>
+      <section class="card">
+        <span class="order">第 3 个</span>
+        <h2>fy 线路对比专题</h2>
+        <p>按 CN2 对比、大陆优化线路和低延迟稳定性取舍拆页。</p>
+        <ul>
+          <li><a href="./fy-line-comparison/index.html">站点首页</a></li>
+          <li><a href="./fy-line-comparison/cn2-vs-bgp/index.html">CN2 与 BGP 对比页</a></li>
+          <li><a href="./fy-line-comparison/mainland-optimized-lines/index.html">大陆优化线路判断页</a></li>
+          <li><a href="./fy-line-comparison/latency-stability-check/index.html">低延迟与稳定性取舍页</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
