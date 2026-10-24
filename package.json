@@ -5,6 +5,8 @@
   "type": "module",
   "description": "Batch site generator and publisher for GitHub Pages repositories.",
   "scripts": {
+    "select": "node scripts/select-next-job.mjs",
+    "cycle": "node scripts/run-factory-cycle.mjs",
     "generate": "node scripts/generate-sites.mjs",
     "build:root-site": "node scripts/build-root-site.mjs",
     "deploy": "node scripts/deploy-sites.mjs",
