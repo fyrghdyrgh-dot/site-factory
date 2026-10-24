@@ -39,6 +39,15 @@
 | 25 | 系统适配专题 | 02 | `fy-system-compatibility-v02` | https://fyrghdyrgh-dot.github.io/fy-system-compatibility-v02/ | lead 站第二版 |
 | 26 | 服务器 FAQ 专题 | 02 | `fy-ops-faq-v02` | https://fyrghdyrgh-dot.github.io/fy-ops-faq-v02/ | lead 站第二版 |
 | 27 | 服务器方案选择 | 01 | `fy-server-choice` | https://fyrghdyrgh-dot.github.io/fy-server-choice/ | lead 站首版 |
+| 28 | 数据清洗工具站 | 01 | `fy-data-clean-lab` | https://fyrghdyrgh-dot.github.io/fy-data-clean-lab/ | 工具站首版 |
+| 29 | 开发排查工具站 | 01 | `fy-dev-debug-lab` | https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/ | 工具站首版 |
+| 30 | 内容运营工具站 | 01 | `fy-content-ops-lab` | https://fyrghdyrgh-dot.github.io/fy-content-ops-lab/ | 工具站首版 |
+| 31 | 本地化工具站 | 01 | `fy-localization-toolkit` | https://fyrghdyrgh-dot.github.io/fy-localization-toolkit/ | 工具站首版 |
+| 32 | 服务器方案选择 | 02 | `fy-server-choice-v02` | https://fyrghdyrgh-dot.github.io/fy-server-choice-v02/ | lead 站第二版 |
+| 33 | 业务场景站 | 03 | `fy-business-scenario-v03` | https://fyrghdyrgh-dot.github.io/fy-business-scenario-v03/ | lead 站第三版 |
+| 34 | 香港节点推荐站 | 03 | `fy-hk-server-selector-v03` | https://fyrghdyrgh-dot.github.io/fy-hk-server-selector-v03/ | lead 站第三版 |
+| 35 | 线路对比站 | 03 | `fy-line-comparison-v03` | https://fyrghdyrgh-dot.github.io/fy-line-comparison-v03/ | lead 站第三版 |
+| 36 | SaaS 方案比较 | 01 | `fy-saas-compare` | https://fyrghdyrgh-dot.github.io/fy-saas-compare/ | lead 站首版 |
 
 ## 既有已知站点
 
@@ -53,8 +62,7 @@
 
 ## 待补发
 
-- `SaaS 方案比较`：计划仓库 slug 为 `fy-saas-compare`
-- 当前状态：本地产物已生成，发布时被 GitHub 的“短时间创建仓库过多”限流拦截，待下一轮重试
+- 当前无
 
 ## 维护说明
 

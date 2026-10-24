@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSV 列名标准化 - fy 数据清洗工具站</title>
+  <meta name="description" content="处理渠道报表、活动导出和 CRM 列名不一致的问题，先把原始字段统一，再进入后续汇总或导入。">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CSV 列名标准化 - fy 数据清洗工具站">
+  <meta property="og:description" content="处理渠道报表、活动导出和 CRM 列名不一致的问题，先把原始字段统一，再进入后续汇总或导入。">
+  <meta property="og:url" content="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab/csv-column-normalizer/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab/csv-column-normalizer/">
+  <link rel="stylesheet" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab/assets/tool.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CSV 列名标准化","url":"https://fyrghdyrgh-dot.github.io/fy-data-clean-lab/csv-column-normalizer/","applicationCategory":"表格整理","description":"处理渠道报表、活动导出和 CRM 列名不一致的问题，先把原始字段统一，再进入后续汇总或导入。","featureList":["确认标准列名清单","映射各来源字段","统一空值和日期格式","导出标准 CSV 并抽样检查"]}</script>
+</head>
+<body>
+  <header class="page-top shell">
+    <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab/">fy data clean lab</a>
+    <nav><a href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab/#toolDirectory">返回工具目录</a></nav>
+  </header>
+  <main class="shell detail-shell">
+    <section class="detail-hero">
+      <div>
+        <p class="eyebrow">表格整理</p>
+        <h1>CSV 列名标准化</h1>
+        <p class="hero-text">当同一份报表来自多个来源时，最常见的问题是列名不一致、字段顺序混乱、空值标记不同。这个页面把标准化前后的检查点写清楚，方便团队先统一格式。</p>
+        <div class="tag-row">
+          <span>CSV</span><span>列名规范</span><span>导入前检查</span>
+        </div>
+      </div>
+      <aside class="detail-panel">
+        <h2>快速信息</h2>
+        <ul>
+          <li>适合场景：渠道投放报表汇总、多店铺订单导出合并、CRM 导入前预处理</li>
+          <li>常见输入：CSV 文件、标准字段表、空值规则</li>
+          <li>输出结果：统一列名的 CSV、字段映射记录</li>
+        </ul>
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-data-clean-lab/" target="_blank" rel="noreferrer">返回工具站</a>
+      </aside>
+    </section>
+    <section class="detail-grid">
+      <article class="detail-card">
+        <h2>使用步骤</h2>
+        <ol>
+          <li>确认标准列名清单</li><li>映射各来源字段</li><li>统一空值和日期格式</li><li>导出标准 CSV 并抽样检查</li>
+        </ol>
+      </article>
+      <article class="detail-card">
+        <h2>适合谁用</h2>
+        <ul>
+          <li>渠道投放报表汇总</li><li>多店铺订单导出合并</li><li>CRM 导入前预处理</li>
+        </ul>
+      </article>
+      <article class="detail-card">
+        <h2>输入与输出</h2>
+        <p><strong>输入：</strong>CSV 文件、标准字段表、空值规则</p>
+        <p><strong>输出：</strong>统一列名的 CSV、字段映射记录</p>
+      </article>
+    </section>
+    <section class="faq-shell">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>CSV 列名标准化 常见问题</h2>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-card"><h3>列名一定要全英文吗？</h3><p>不一定，但建议在同一个流程里只保留一套命名规范，避免中英混杂导致后续自动化失败。</p></article><article class="faq-card"><h3>日期字段要怎么处理？</h3><p>建议在标准化阶段统一成同一种格式，并明确时区，避免后续聚合时出现偏差。</p></article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

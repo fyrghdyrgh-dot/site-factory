@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>浏览器控制台排错顺序 - fy 开发排查工具站</title>
+  <meta name="description" content="适合页面白屏、脚本失效、接口报错和资源加载异常场景，先把控制台、网络面板和页面行为串起来看。">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="浏览器控制台排错顺序 - fy 开发排查工具站">
+  <meta property="og:description" content="适合页面白屏、脚本失效、接口报错和资源加载异常场景，先把控制台、网络面板和页面行为串起来看。">
+  <meta property="og:url" content="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/browser-console-debug/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/browser-console-debug/">
+  <link rel="stylesheet" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/assets/tool.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"浏览器控制台排错顺序","url":"https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/browser-console-debug/","applicationCategory":"前端定位","description":"适合页面白屏、脚本失效、接口报错和资源加载异常场景，先把控制台、网络面板和页面行为串起来看。","featureList":["先看 Console 第一条错误","再切到 Network 看失败请求","确认资源、接口和脚本哪个先异常","最后结合页面操作路径复现问题"]}</script>
+</head>
+<body>
+  <header class="page-top shell">
+    <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/">fy dev debug lab</a>
+    <nav><a href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/#toolDirectory">返回工具目录</a></nav>
+  </header>
+  <main class="shell detail-shell">
+    <section class="detail-hero">
+      <div>
+        <p class="eyebrow">前端定位</p>
+        <h1>浏览器控制台排错顺序</h1>
+        <p class="hero-text">浏览器报错最怕一上来就改代码。先确定是资源、脚本、接口还是状态同步问题，排查效率会高很多。</p>
+        <div class="tag-row">
+          <span>浏览器</span><span>控制台</span><span>前端</span>
+        </div>
+      </div>
+      <aside class="detail-panel">
+        <h2>快速信息</h2>
+        <ul>
+          <li>适合场景：页面白屏排查、脚本错误定位、资源加载异常</li>
+          <li>常见输入：报错截图、控制台日志、复现步骤</li>
+          <li>输出结果：排错顺序、异常范围判断</li>
+        </ul>
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/" target="_blank" rel="noreferrer">返回工具站</a>
+      </aside>
+    </section>
+    <section class="detail-grid">
+      <article class="detail-card">
+        <h2>使用步骤</h2>
+        <ol>
+          <li>先看 Console 第一条错误</li><li>再切到 Network 看失败请求</li><li>确认资源、接口和脚本哪个先异常</li><li>最后结合页面操作路径复现问题</li>
+        </ol>
+      </article>
+      <article class="detail-card">
+        <h2>适合谁用</h2>
+        <ul>
+          <li>页面白屏排查</li><li>脚本错误定位</li><li>资源加载异常</li>
+        </ul>
+      </article>
+      <article class="detail-card">
+        <h2>输入与输出</h2>
+        <p><strong>输入：</strong>报错截图、控制台日志、复现步骤</p>
+        <p><strong>输出：</strong>排错顺序、异常范围判断</p>
+      </article>
+    </section>
+    <section class="faq-shell">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>浏览器控制台排错顺序 常见问题</h2>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-card"><h3>Console 里很多报错先看哪个？</h3><p>优先看最早出现、最接近主流程的错误，而不是数量最多的提示。</p></article><article class="faq-card"><h3>Network 全是 200 还可能有问题吗？</h3><p>有可能，接口内容错误、脚本执行异常和状态同步问题都可能发生。</p></article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

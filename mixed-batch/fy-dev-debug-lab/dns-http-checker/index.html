@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>域名与 HTTP 状态检查 - fy 开发排查工具站</title>
+  <meta name="description" content="适合站点切换域名、接口换网关或页面上线前快速确认解析是否生效、跳转是否正常。">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="域名与 HTTP 状态检查 - fy 开发排查工具站">
+  <meta property="og:description" content="适合站点切换域名、接口换网关或页面上线前快速确认解析是否生效、跳转是否正常。">
+  <meta property="og:url" content="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/dns-http-checker/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/dns-http-checker/">
+  <link rel="stylesheet" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/assets/tool.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"域名与 HTTP 状态检查","url":"https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/dns-http-checker/","applicationCategory":"接口排查","description":"适合站点切换域名、接口换网关或页面上线前快速确认解析是否生效、跳转是否正常。","featureList":["先查 DNS 解析结果","再确认 HTTP 状态码与跳转链路","重点看登录页和表单页是否异常","必要时补不同地区访问核对"]}</script>
+</head>
+<body>
+  <header class="page-top shell">
+    <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/">fy dev debug lab</a>
+    <nav><a href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/#toolDirectory">返回工具目录</a></nav>
+  </header>
+  <main class="shell detail-shell">
+    <section class="detail-hero">
+      <div>
+        <p class="eyebrow">接口排查</p>
+        <h1>域名与 HTTP 状态检查</h1>
+        <p class="hero-text">很多上线问题并不是代码错误，而是 DNS、证书、跳转链或缓存导致的访问异常。这个页面更适合做上线前后的快速复核。</p>
+        <div class="tag-row">
+          <span>DNS</span><span>HTTP</span><span>上线检查</span>
+        </div>
+      </div>
+      <aside class="detail-panel">
+        <h2>快速信息</h2>
+        <ul>
+          <li>适合场景：域名切换、页面上线前复查、网关地址替换</li>
+          <li>常见输入：域名、目标 URL、预期状态</li>
+          <li>输出结果：解析结果、状态码检查记录</li>
+        </ul>
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/" target="_blank" rel="noreferrer">返回工具站</a>
+      </aside>
+    </section>
+    <section class="detail-grid">
+      <article class="detail-card">
+        <h2>使用步骤</h2>
+        <ol>
+          <li>先查 DNS 解析结果</li><li>再确认 HTTP 状态码与跳转链路</li><li>重点看登录页和表单页是否异常</li><li>必要时补不同地区访问核对</li>
+        </ol>
+      </article>
+      <article class="detail-card">
+        <h2>适合谁用</h2>
+        <ul>
+          <li>域名切换</li><li>页面上线前复查</li><li>网关地址替换</li>
+        </ul>
+      </article>
+      <article class="detail-card">
+        <h2>输入与输出</h2>
+        <p><strong>输入：</strong>域名、目标 URL、预期状态</p>
+        <p><strong>输出：</strong>解析结果、状态码检查记录</p>
+      </article>
+    </section>
+    <section class="faq-shell">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>域名与 HTTP 状态检查 常见问题</h2>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-card"><h3>DNS 生效了为什么页面还是旧的？</h3><p>通常和浏览器缓存、CDN 缓存或地区传播延迟有关。</p></article><article class="faq-card"><h3>HTTP 200 就代表没问题吗？</h3><p>不一定，还要检查页面内容、关键接口和跳转是否符合预期。</p></article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

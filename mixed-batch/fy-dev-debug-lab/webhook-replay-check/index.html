@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Webhook 回调复核页 - fy 开发排查工具站</title>
+  <meta name="description" content="适合支付回调、表单通知和自动化触发场景，帮助确认到底是第三方重复触发还是本地逻辑没有正确处理。">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Webhook 回调复核页 - fy 开发排查工具站">
+  <meta property="og:description" content="适合支付回调、表单通知和自动化触发场景，帮助确认到底是第三方重复触发还是本地逻辑没有正确处理。">
+  <meta property="og:url" content="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/webhook-replay-check/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/webhook-replay-check/">
+  <link rel="stylesheet" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/assets/tool.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Webhook 回调复核页","url":"https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/webhook-replay-check/","applicationCategory":"交付复核","description":"适合支付回调、表单通知和自动化触发场景，帮助确认到底是第三方重复触发还是本地逻辑没有正确处理。","featureList":["先保留原始请求和签名字段","再看返回状态码和超时情况","比对重试次数和幂等处理","最后用同 payload 做一轮重放"]}</script>
+</head>
+<body>
+  <header class="page-top shell">
+    <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/">fy dev debug lab</a>
+    <nav><a href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/#toolDirectory">返回工具目录</a></nav>
+  </header>
+  <main class="shell detail-shell">
+    <section class="detail-hero">
+      <div>
+        <p class="eyebrow">交付复核</p>
+        <h1>Webhook 回调复核页</h1>
+        <p class="hero-text">Webhook 问题通常出在签名校验、超时、幂等和重试记录缺失。这个页面把回调检查顺序集中到一页，方便排查时不漏步骤。</p>
+        <div class="tag-row">
+          <span>Webhook</span><span>回调</span><span>重试</span>
+        </div>
+      </div>
+      <aside class="detail-panel">
+        <h2>快速信息</h2>
+        <ul>
+          <li>适合场景：支付回调排查、表单通知验证、自动化任务触发复核</li>
+          <li>常见输入：Webhook payload、签名字段、返回日志</li>
+          <li>输出结果：回调检查记录、问题定位方向</li>
+        </ul>
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/" target="_blank" rel="noreferrer">返回工具站</a>
+      </aside>
+    </section>
+    <section class="detail-grid">
+      <article class="detail-card">
+        <h2>使用步骤</h2>
+        <ol>
+          <li>先保留原始请求和签名字段</li><li>再看返回状态码和超时情况</li><li>比对重试次数和幂等处理</li><li>最后用同 payload 做一轮重放</li>
+        </ol>
+      </article>
+      <article class="detail-card">
+        <h2>适合谁用</h2>
+        <ul>
+          <li>支付回调排查</li><li>表单通知验证</li><li>自动化任务触发复核</li>
+        </ul>
+      </article>
+      <article class="detail-card">
+        <h2>输入与输出</h2>
+        <p><strong>输入：</strong>Webhook payload、签名字段、返回日志</p>
+        <p><strong>输出：</strong>回调检查记录、问题定位方向</p>
+      </article>
+    </section>
+    <section class="faq-shell">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Webhook 回调复核页 常见问题</h2>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-card"><h3>为什么要保留原始请求？</h3><p>没有原始请求，很难区分是签名串变化还是你本地逻辑处理异常。</p></article><article class="faq-card"><h3>幂等一定要做吗？</h3><p>如果第三方会重试，幂等处理几乎是必须项。</p></article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fy 开发排查工具站</title>
+  <meta name="description" content="围绕 API 联调、浏览器排错、Webhook 回调和前端性能复查整理的轻量工具站，适合开发、测试和技术支持团队快速定位问题。">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="fy 开发排查工具站">
+  <meta property="og:description" content="围绕 API 联调、浏览器排错、Webhook 回调和前端性能复查整理的轻量工具站，适合开发、测试和技术支持团队快速定位问题。">
+  <meta property="og:url" content="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/">
+  <link rel="stylesheet" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/assets/tool.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"fy 开发排查工具站","url":"https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/","description":"围绕 API 联调、浏览器排错、Webhook 回调和前端性能复查整理的轻量工具站，适合开发、测试和技术支持团队快速定位问题。","hasPart":[{"@type":"SoftwareApplication","name":"API 请求头检查器","url":"https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/api-header-checker/","applicationCategory":"接口排查"},{"@type":"SoftwareApplication","name":"域名与 HTTP 状态检查","url":"https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/dns-http-checker/","applicationCategory":"接口排查"},{"@type":"SoftwareApplication","name":"浏览器控制台排错顺序","url":"https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/browser-console-debug/","applicationCategory":"前端定位"},{"@type":"SoftwareApplication","name":"Webhook 回调复核页","url":"https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/webhook-replay-check/","applicationCategory":"交付复核"},{"@type":"SoftwareApplication","name":"前端上线复查清单","url":"https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/frontend-launch-check/","applicationCategory":"交付复核"}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/">fy dev debug lab</a>
+      <div class="header-actions">
+        <a href="#toolDirectory">工具目录</a>
+        <a href="#faq">常见问题</a>
+        <a class="button ghost" href="#toolDirectory">查看全部工具</a>
+      </div>
+    </div>
+    <div class="shell hero-grid">
+      <div>
+        <p class="eyebrow">developer tool family</p>
+        <h1>先把请求、日志和页面行为看清楚，再决定往哪一层排查。</h1>
+        <p class="hero-text">适合接口联调、页面报错、Webhook 回调和上线前复查场景。每个页面都尽量把输入、输出、检查顺序和常见误区拆开写清楚。</p>
+        <div class="hero-cta">
+          <a class="button" href="#toolDirectory">查看全部工具</a>
+          <a class="button ghost" href="#faq">先看排查 FAQ</a>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <p>更适合开发、测试和技术支持团队在排查 API、前端和回调问题时快速定位重点，不用在多个零散笔记里来回翻。</p>
+        <div class="hero-search">
+          <input id="toolSearch" type="search" placeholder="搜索工具名、场景或标签，例如：API、Webhook、浏览器、性能">
+        </div>
+        <div class="chip-row"><button class="chip" type="button" data-filter="api-check">接口排查</button><button class="chip" type="button" data-filter="frontend-debug">前端定位</button><button class="chip" type="button" data-filter="delivery-check">交付复核</button></div>
+      </aside>
+    </div>
+  </header>
+  <main class="shell main-stack" id="toolDirectory">
+    <section class="stats-row">
+      <article>
+        <strong>5</strong>
+        <span>个实用工具页</span>
+      </article>
+      <article>
+        <strong>3</strong>
+        <span>个场景分类</span>
+      </article>
+      <article>
+        <strong>2026-10</strong>
+        <span>最近更新</span>
+      </article>
+    </section>
+    <section class="category-shell" data-group="api-check" data-keywords="接口排查 先核对请求、鉴权和返回，再看接口逻辑和环境差异。 API 请求头检查器 适合联调时快速核对 Authorization、Content-Type、Cookie 和环境 Header，避免同一接口在不同端表现不一致。 API Header 联调 域名与 HTTP 状态检查 适合站点切换域名、接口换网关或页面上线前快速确认解析是否生效、跳转是否正常。 DNS HTTP 上线检查">
+      <div class="section-head">
+        <p class="eyebrow">接口排查</p>
+        <h2>先核对请求、鉴权和返回，再看接口逻辑和环境差异。</h2>
+      </div>
+      <div class="tool-grid">
+        <article class="tool-card" data-card data-keywords="API 请求头检查器 先比对 Header，再深挖接口差异 适合联调时快速核对 Authorization、Content-Type、Cookie 和环境 Header，避免同一接口在不同端表现不一致。 API Header 联调 前后端接口联调 第三方 API 对接 多环境请求对比">
+      <div class="tool-head">
+        <div class="tool-icon">A</div>
+        <div>
+          <h3>API 请求头检查器</h3>
+          <p class="tagline">先比对 Header，再深挖接口差异</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span>API</span><span>Header</span><span>联调</span>
+      </div>
+      <p class="tool-summary">适合联调时快速核对 Authorization、Content-Type、Cookie 和环境 Header，避免同一接口在不同端表现不一致。</p>
+      <p class="tool-meta">接口排查 · Header 差异点 / 联调检查清单</p>
+      <div class="card-actions">
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/api-header-checker/">进入工具页</a>
+        <a class="text-link" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/" target="_blank" rel="noreferrer">直达链接</a>
+      </div>
+    </article><article class="tool-card" data-card data-keywords="域名与 HTTP 状态检查 解析、跳转和状态码一次核对 适合站点切换域名、接口换网关或页面上线前快速确认解析是否生效、跳转是否正常。 DNS HTTP 上线检查 域名切换 页面上线前复查 网关地址替换">
+      <div class="tool-head">
+        <div class="tool-icon">域</div>
+        <div>
+          <h3>域名与 HTTP 状态检查</h3>
+          <p class="tagline">解析、跳转和状态码一次核对</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span>DNS</span><span>HTTP</span><span>上线检查</span>
+      </div>
+      <p class="tool-summary">适合站点切换域名、接口换网关或页面上线前快速确认解析是否生效、跳转是否正常。</p>
+      <p class="tool-meta">接口排查 · 解析结果 / 状态码检查记录</p>
+      <div class="card-actions">
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/dns-http-checker/">进入工具页</a>
+        <a class="text-link" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/" target="_blank" rel="noreferrer">直达链接</a>
+      </div>
+    </article>
+      </div>
+    </section>
+<section class="category-shell" data-group="frontend-debug" data-keywords="前端定位 适合页面异常、控制台报错和首屏体验复查。 浏览器控制台排错顺序 适合页面白屏、脚本失效、接口报错和资源加载异常场景，先把控制台、网络面板和页面行为串起来看。 浏览器 控制台 前端">
+      <div class="section-head">
+        <p class="eyebrow">前端定位</p>
+        <h2>适合页面异常、控制台报错和首屏体验复查。</h2>
+      </div>
+      <div class="tool-grid">
+        <article class="tool-card" data-card data-keywords="浏览器控制台排错顺序 先定位报错范围，再逐层排查 适合页面白屏、脚本失效、接口报错和资源加载异常场景，先把控制台、网络面板和页面行为串起来看。 浏览器 控制台 前端 页面白屏排查 脚本错误定位 资源加载异常">
+      <div class="tool-head">
+        <div class="tool-icon">浏</div>
+        <div>
+          <h3>浏览器控制台排错顺序</h3>
+          <p class="tagline">先定位报错范围，再逐层排查</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span>浏览器</span><span>控制台</span><span>前端</span>
+      </div>
+      <p class="tool-summary">适合页面白屏、脚本失效、接口报错和资源加载异常场景，先把控制台、网络面板和页面行为串起来看。</p>
+      <p class="tool-meta">前端定位 · 排错顺序 / 异常范围判断</p>
+      <div class="card-actions">
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/browser-console-debug/">进入工具页</a>
+        <a class="text-link" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/" target="_blank" rel="noreferrer">直达链接</a>
+      </div>
+    </article>
+      </div>
+    </section>
+<section class="category-shell" data-group="delivery-check" data-keywords="交付复核 围绕发布、回调和上线前后的关键核对步骤整理工具页。 Webhook 回调复核页 适合支付回调、表单通知和自动化触发场景，帮助确认到底是第三方重复触发还是本地逻辑没有正确处理。 Webhook 回调 重试 前端上线复查清单 适合工具站、内容站和落地页上线前做一轮轻量复查，避免图片、字体、按钮和关键交互在发布后才暴露问题。 前端发布 首屏 上线检查">
+      <div class="section-head">
+        <p class="eyebrow">交付复核</p>
+        <h2>围绕发布、回调和上线前后的关键核对步骤整理工具页。</h2>
+      </div>
+      <div class="tool-grid">
+        <article class="tool-card" data-card data-keywords="Webhook 回调复核页 把签名、重试和返回值一起看 适合支付回调、表单通知和自动化触发场景，帮助确认到底是第三方重复触发还是本地逻辑没有正确处理。 Webhook 回调 重试 支付回调排查 表单通知验证 自动化任务触发复核">
+      <div class="tool-head">
+        <div class="tool-icon">W</div>
+        <div>
+          <h3>Webhook 回调复核页</h3>
+          <p class="tagline">把签名、重试和返回值一起看</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span>Webhook</span><span>回调</span><span>重试</span>
+      </div>
+      <p class="tool-summary">适合支付回调、表单通知和自动化触发场景，帮助确认到底是第三方重复触发还是本地逻辑没有正确处理。</p>
+      <p class="tool-meta">交付复核 · 回调检查记录 / 问题定位方向</p>
+      <div class="card-actions">
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/webhook-replay-check/">进入工具页</a>
+        <a class="text-link" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/" target="_blank" rel="noreferrer">直达链接</a>
+      </div>
+    </article><article class="tool-card" data-card data-keywords="前端上线复查清单 首屏、资源和交互一起复核 适合工具站、内容站和落地页上线前做一轮轻量复查，避免图片、字体、按钮和关键交互在发布后才暴露问题。 前端发布 首屏 上线检查 落地页上线前复查 工具站发布前检查 移动端适配回看">
+      <div class="tool-head">
+        <div class="tool-icon">前</div>
+        <div>
+          <h3>前端上线复查清单</h3>
+          <p class="tagline">首屏、资源和交互一起复核</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span>前端发布</span><span>首屏</span><span>上线检查</span>
+      </div>
+      <p class="tool-summary">适合工具站、内容站和落地页上线前做一轮轻量复查，避免图片、字体、按钮和关键交互在发布后才暴露问题。</p>
+      <p class="tool-meta">交付复核 · 上线复查结果 / 待修问题列表</p>
+      <div class="card-actions">
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/frontend-launch-check/">进入工具页</a>
+        <a class="text-link" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/" target="_blank" rel="noreferrer">直达链接</a>
+      </div>
+    </article>
+      </div>
+    </section>
+    <section class="faq-shell" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>工具站使用说明</h2>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-card"><h3>这套工具站更适合什么阶段？</h3><p>更适合联调、上线前复查和线上问题初步定位阶段，先把范围缩小，再决定深入哪一层。</p></article><article class="faq-card"><h3>为什么每页都强调输入和输出？</h3><p>因为排查类页面最怕只有概念没有落点，明确输入和输出能让团队更快复现和对齐问题。</p></article><article class="faq-card"><h3>后续还能扩什么？</h3><p>可以继续扩登录态排查、跨域问题清单、监控告警复核和日志字段核对等实用页面。</p></article>
+      </div>
+    </section>
+  </main>
+  <script src="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/assets/tool.js"></script>
+</body>
+</html>

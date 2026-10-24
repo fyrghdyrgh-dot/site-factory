@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>API 请求头检查器 - fy 开发排查工具站</title>
+  <meta name="description" content="适合联调时快速核对 Authorization、Content-Type、Cookie 和环境 Header，避免同一接口在不同端表现不一致。">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="API 请求头检查器 - fy 开发排查工具站">
+  <meta property="og:description" content="适合联调时快速核对 Authorization、Content-Type、Cookie 和环境 Header，避免同一接口在不同端表现不一致。">
+  <meta property="og:url" content="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/api-header-checker/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/api-header-checker/">
+  <link rel="stylesheet" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/assets/tool.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"API 请求头检查器","url":"https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/api-header-checker/","applicationCategory":"接口排查","description":"适合联调时快速核对 Authorization、Content-Type、Cookie 和环境 Header，避免同一接口在不同端表现不一致。","featureList":["先确认请求方法和目标环境","对照 Authorization、Content-Type 和 Cookie","保留一条成功请求和一条失败请求做比对","最后再看响应体和错误码"]}</script>
+</head>
+<body>
+  <header class="page-top shell">
+    <a class="brand" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/">fy dev debug lab</a>
+    <nav><a href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/#toolDirectory">返回工具目录</a></nav>
+  </header>
+  <main class="shell detail-shell">
+    <section class="detail-hero">
+      <div>
+        <p class="eyebrow">接口排查</p>
+        <h1>API 请求头检查器</h1>
+        <p class="hero-text">很多联调问题并不在接口逻辑本身，而是在 Header、Token、Cookie 或请求来源差异上。这个页面会把最容易漏掉的请求头检查点先列出来。</p>
+        <div class="tag-row">
+          <span>API</span><span>Header</span><span>联调</span>
+        </div>
+      </div>
+      <aside class="detail-panel">
+        <h2>快速信息</h2>
+        <ul>
+          <li>适合场景：前后端接口联调、第三方 API 对接、多环境请求对比</li>
+          <li>常见输入：请求示例、Header 列表、环境信息</li>
+          <li>输出结果：Header 差异点、联调检查清单</li>
+        </ul>
+        <a class="button" href="https://fyrghdyrgh-dot.github.io/fy-dev-debug-lab/" target="_blank" rel="noreferrer">返回工具站</a>
+      </aside>
+    </section>
+    <section class="detail-grid">
+      <article class="detail-card">
+        <h2>使用步骤</h2>
+        <ol>
+          <li>先确认请求方法和目标环境</li><li>对照 Authorization、Content-Type 和 Cookie</li><li>保留一条成功请求和一条失败请求做比对</li><li>最后再看响应体和错误码</li>
+        </ol>
+      </article>
+      <article class="detail-card">
+        <h2>适合谁用</h2>
+        <ul>
+          <li>前后端接口联调</li><li>第三方 API 对接</li><li>多环境请求对比</li>
+        </ul>
+      </article>
+      <article class="detail-card">
+        <h2>输入与输出</h2>
+        <p><strong>输入：</strong>请求示例、Header 列表、环境信息</p>
+        <p><strong>输出：</strong>Header 差异点、联调检查清单</p>
+      </article>
+    </section>
+    <section class="faq-shell">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>API 请求头检查器 常见问题</h2>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-card"><h3>为什么浏览器请求成功但 Postman 失败？</h3><p>通常是 Cookie、Origin、CSRF 或自动附带 Header 不同。</p></article><article class="faq-card"><h3>Header 要全部复制吗？</h3><p>不用，先抓最关键的鉴权、内容类型和上下文 Header，避免把噪音也复制进去。</p></article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
